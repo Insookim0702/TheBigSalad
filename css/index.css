@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: Spoqa Han Sans, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 750px;
+}
+
+h1 {
+  font-size: 5.5rem;
+  font-family: "Gothic A1", sans-serif;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+.point {
+  font-size: 5rem;
+  background: -webkit-linear-gradient(left, red, blue);
+  background: -moz-linear-gradient(right, red, blue);
+  background: -o-linear-gradient(right, red, blue);
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.short_discription {
+  font-size: 2rem;
+}
+
+nav {
+  height: 10px;
+  background: linear-gradient(to left, blue, red);
+}
+
+.experience {
+  border-bottom: 1px solid #eee;
+}
+
+li {
+  color: #3a7bd5;
+}
+
+a {
+  color: #3a7bd5;
+}
