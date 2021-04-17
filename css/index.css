@@ -88,6 +88,11 @@ a {
     font-size: 2rem;
 }
 
+.title3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
 .skill_area {
     border-bottom: 1px solid #eee;
 }
