@@ -88,6 +88,9 @@ a {
     font-size: 2rem;
 }
 
+.skill_area {
+    border-bottom: 1px solid #eee;
+}
 @media (min-width: 1024px) {
     body {
         font-size: 1.3rem;
