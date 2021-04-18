@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 html {
-    font-size: 14px;
+    font-size: 19px;
+    font-weight: 300;
 }
 body {
     margin: 0;
@@ -20,31 +21,45 @@ body {
 }
 
 h1 {
+    font-size: 51px;
     line-height: 0.9;
     font-family: Spoqa Han Sans, sans-serif;
-    font-size: 50.7px;
     margin: 10px 0px;
-}
-
-.name_intro {
-    font-size: 10vw;
-    width: 20vw;
-    line-height: 0.7;
-    font-weight: 700;
-    font-family: Spoqa Han Sans, sans-serif;
+    width: 70vw;
 }
 
 h2 {
-    margin-top: 20vh;
-    margin-bottom: 10vh;
-    font-size: 3rem;
+    font-size: 2.3rem;
+    line-height: 2;
+    margin-top: 110px;
+    /* margin-bottom: 60px; */
     line-height: 0.7;
+    width: 60vw;
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     padding: 0;
     margin: 0;
+    margin-top: 60px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 50px 0px 0px 0px;
+    /* font-weight: 400; */
+}
+
+.position {
+    font-size: 0.8rem;
+    margin: 15px 0px 40px 0px;
+    line-height: 1.2;
+}
+
+.title3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 30px 0px 4px 0px;
 }
 
 .point {
@@ -74,10 +89,15 @@ nav {
 
 .experience {
     border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
 }
 
 li {
-    color: #3a7bd5;
+    color: #b53471;
+}
+
+.black {
+    color: #222;
 }
 
 a {
@@ -88,14 +108,6 @@ a {
     font-size: 2rem;
 }
 
-.title3 {
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-.skill_area {
-    border-bottom: 1px solid #eee;
-}
 @media (min-width: 1024px) {
     body {
         font-size: 1.3rem;
@@ -118,6 +130,12 @@ a {
         font-size: 2.5rem;
         padding: 0;
         margin: 0;
+    }
+
+    h4 {
+        font-size: 2.2rem;
+        margin: 0;
+        /* font-weight: 400; */
     }
 
     .container {
@@ -166,5 +184,16 @@ a {
 
     .project {
         margin-bottom: 70px;
+    }
+
+    .position {
+        font-size: 1rem;
+        margin: 15px 0px 40px 0px;
+        line-height: 1.2;
+    }
+
+    .skill_area {
+        border-bottom: 1px solid #eee;
+        padding: 50px 0px 50px 0px;
     }
 }
