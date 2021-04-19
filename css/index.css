@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html {
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 300;
 }
 body {
@@ -64,10 +64,10 @@ h4 {
 
 .point {
     /* font-size: 3rem; */
-    background: -webkit-linear-gradient(left, red, blue);
-    background: -moz-linear-gradient(right, red, blue);
-    background: -o-linear-gradient(right, red, blue);
-    background: linear-gradient(to right, red, blue);
+    background: -webkit-linear-gradient(left, #00b894, #81ecec);
+    background: -moz-linear-gradient(right, #00b894, #81ecec);
+    background: -o-linear-gradient(right, #00b894, #81ecec);
+    background: linear-gradient(to right, #00b894, #81ecec);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -84,7 +84,8 @@ nav {
     height: 10px;
     position: sticky;
     top: 0;
-    background: linear-gradient(to left, blue, red);
+    /* background: linear-gradient(to left, blue, red); */
+    background: linear-gradient(to right, #00b894, #81ecec);
 }
 
 .experience {
