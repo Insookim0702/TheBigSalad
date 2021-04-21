@@ -117,6 +117,15 @@ a {
     font-size: 2rem;
 }
 
+.top_allow {
+    display: none;
+    position: sticky;
+    width: 2.6rem;
+    left: 79vw;
+    bottom: 8vh;
+    cursor: pointer;
+}
+
 @media (min-width: 1024px) {
     body {
         font-size: 1.3rem;
@@ -204,5 +213,13 @@ a {
     .skill_area {
         border-bottom: 1px solid #eee;
         padding: 50px 0px 50px 0px;
+    }
+
+    .top_allow {
+        display: none;
+        position: sticky;
+        width: 4rem;
+        left: 86vw;
+        bottom: 13vh;
     }
 }
