@@ -126,6 +126,26 @@ a {
     cursor: pointer;
 }
 
+.contents {
+    display: none;
+}
+
+@media (min-width: 1290px) {
+    .contents {
+        display: block;
+        position: sticky;
+        top: 300px;
+        left: 20px;
+        width: 200px;
+    }
+
+    .little_title {
+        margin: 2px 0px;
+        font-size: 2rem;
+        color: #bdc3c7;
+        cursor: pointer;
+    }
+}
 @media (min-width: 1024px) {
     body {
         font-size: 1.3rem;
@@ -221,5 +241,13 @@ a {
         width: 4rem;
         left: 86vw;
         bottom: 13vh;
+    }
+
+    .contents {
+        display: block;
+        position: sticky;
+        top: 300px;
+        left: 16vw;
+        width: 200px;
     }
 }
