@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 html {
     font-size: 14px;
     font-weight: 300;
@@ -102,14 +102,7 @@ li {
 }
 
 a {
-    /* color: #00b894; */
-    background: -webkit-linear-gradient(left, #00b894, #81ecec);
-    background: -moz-linear-gradient(right, #00b894, #81ecec);
-    background: -o-linear-gradient(right, #00b894, #81ecec);
-    background: linear-gradient(to right, #00b894, #81ecec);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #00b894;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -142,7 +135,7 @@ a {
         padding-right: 17px;
         display: block;
         width: 200px;
-        margin-left: 15vw;
+        margin-left: 13vw;
     }
 
     .little_title {
@@ -178,7 +171,7 @@ a {
     }
 
     h4 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin: 0;
         /* font-weight: 400; */
     }
