@@ -130,18 +130,25 @@ a {
     display: none;
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 1551px) {
+    .contens_box {
+        position: absolute;
+        top: 480px;
+        width: 100%;
+    }
+
     .contents {
+        border-right: 2px solid #d6d6d6;
+        padding-right: 17px;
         display: block;
-        position: sticky;
-        top: 300px;
-        left: 20px;
         width: 200px;
+        margin-left: 15vw;
     }
 
     .little_title {
+        text-align: right;
         margin: 2px 0px;
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: #bdc3c7;
         cursor: pointer;
     }
@@ -241,13 +248,5 @@ a {
         width: 4rem;
         left: 86vw;
         bottom: 13vh;
-    }
-
-    .contents {
-        display: block;
-        position: sticky;
-        top: 300px;
-        left: 16vw;
-        width: 200px;
     }
 }
