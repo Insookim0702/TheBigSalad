@@ -100,7 +100,7 @@ function contentStyle(idx) {
         if (index === idx) {
             element.style.color = 'black';
             element.style.transform = 'scale(1.2)';
-            element.style.marginRight = '14px';
+            element.style.marginRight = '18px';
         } else {
             element.style.color = '#bdc3c7';
             element.style.transform = 'scale(1)';
