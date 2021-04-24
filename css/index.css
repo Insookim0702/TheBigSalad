@@ -126,6 +126,33 @@ a {
     cursor: pointer;
 }
 
+.contents {
+    display: none;
+}
+
+@media (min-width: 1551px) {
+    .contens_box {
+        position: absolute;
+        top: 480px;
+        width: 100%;
+    }
+
+    .contents {
+        border-right: 2px solid #d6d6d6;
+        padding-right: 17px;
+        display: block;
+        width: 200px;
+        margin-left: 15vw;
+    }
+
+    .little_title {
+        text-align: right;
+        margin: 2px 0px;
+        font-size: 1.4rem;
+        color: #bdc3c7;
+        cursor: pointer;
+    }
+}
 @media (min-width: 1024px) {
     body {
         font-size: 1.3rem;
