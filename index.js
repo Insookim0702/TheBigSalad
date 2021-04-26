@@ -53,8 +53,6 @@ function init() {
 
     LITTLE_TITLE.forEach((element, index) => {
         element.addEventListener('click', () => {
-            console.log(index);
-            console.log(SECTION_START_Y_PX[index]);
             scrollTo(0, SECTION_START_Y_PX[index] + 10);
         });
     });
