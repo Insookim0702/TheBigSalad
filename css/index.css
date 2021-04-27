@@ -127,25 +127,25 @@ a {
     .contens_box {
         position: absolute;
         top: 480px;
-        width: 100%;
+        width: 200px;
+        right: 14vw;
     }
 
     .contents {
-        border-right: 2px solid #d6d6d6;
-        padding-right: 17px;
+        border-left: 2px solid #d6d6d6;
+        padding-left: 17px;
         display: block;
-        width: 200px;
-        margin-left: 13vw;
     }
 
     .little_title {
-        text-align: right;
+        text-align: left;
         margin: 2px 0px;
         font-size: 1.4rem;
         color: #bdc3c7;
         cursor: pointer;
     }
 }
+
 @media (min-width: 1024px) {
     body {
         font-size: 1.3rem;
