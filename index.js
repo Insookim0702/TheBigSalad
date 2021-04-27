@@ -65,7 +65,7 @@ function scrollReactContents() {
         LITTLE_TITLE.forEach((element, index) => {
             element.style.color = '#bdc3c7';
             element.style.transform = 'scale(1)';
-            element.style.marginRight = '0px';
+            element.style.marginLeft = '0px';
         });
     } else {
         CONTENTS.style.position = 'fixed';
@@ -98,11 +98,11 @@ function contentStyle(idx) {
         if (index === idx) {
             element.style.color = 'black';
             element.style.transform = 'scale(1.2)';
-            element.style.marginRight = '18px';
+            element.style.marginLeft = '11px';
         } else {
             element.style.color = '#bdc3c7';
             element.style.transform = 'scale(1)';
-            element.style.marginRight = '0px';
+            element.style.marginLeft = '0px';
         }
     });
 }
