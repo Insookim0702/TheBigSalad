@@ -10,7 +10,8 @@ html {
 body {
     margin: 0;
     width: 100%;
-    font-family: Spoqa Han Sans, sans-serif;
+    /* font-family: Spoqa Han Sans, sans-serif; */
+    font-family: 'Gothic A1', sans-serif;
     word-break: keep-all;
     letter-spacing: -0.3px;
 }
