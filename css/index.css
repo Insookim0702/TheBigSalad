@@ -7,6 +7,11 @@ html {
     font-size: 14px;
     font-weight: 300;
 }
+::selection {
+    background-color: #55efc4;
+    color: black;
+}
+
 body {
     margin: 0;
     width: 100%;
