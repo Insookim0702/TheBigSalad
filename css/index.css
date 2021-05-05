@@ -7,6 +7,7 @@ html {
     font-size: 14px;
     font-weight: 300;
 }
+
 ::selection {
     background-color: #55efc4;
     color: black;
@@ -19,6 +20,53 @@ body {
     font-family: 'Gothic A1', sans-serif;
     word-break: keep-all;
     letter-spacing: -0.3px;
+}
+
+body.dark {
+    margin: 0;
+    width: 100%;
+    /* font-family: Spoqa Han Sans, sans-serif; */
+    font-family: 'Gothic A1', sans-serif;
+    word-break: keep-all;
+    letter-spacing: -0.3px;
+    background: #141718;
+    color: #f7f1e3;
+}
+
+body.dark nav {
+    height: 10px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #b33939, #ffb142);
+}
+
+body.dark .black {
+    color: #f7f1e3;
+}
+
+body.dark a {
+    color: #ffb142;
+}
+
+body.dark li {
+    color: #ffb142;
+}
+
+body.dark .point {
+    /* font-size: 3rem; */
+    background: -webkit-linear-gradient(left, #b33939, #ffb142);
+    background: -moz-linear-gradient(right, #b33939, #ffb142);
+    background: -o-linear-gradient(right, #b33939, #ffb142);
+    background: linear-gradient(to right, #b33939, #ffb142);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body.dark ::selection {
+    background-color: #ffb142;
+    color: black;
 }
 
 .container {
@@ -116,7 +164,8 @@ a {
     font-size: 2rem;
 }
 
-.top_allow {
+.top_allow,
+.dark_allow {
     display: none;
     position: sticky;
     width: 2.6rem;
@@ -130,7 +179,18 @@ a {
 }
 
 @media (min-width: 1551px) {
-    .contens_box {
+    .dark_button_box {
+        position: absolute;
+        top: 60px;
+        width: 200px;
+        right: 14vw;
+    }
+
+    .dark_toggle {
+        cursor: pointer;
+    }
+
+    .contents_box {
         position: absolute;
         top: 480px;
         width: 200px;
@@ -241,7 +301,8 @@ a {
         padding: 50px 0px 50px 0px;
     }
 
-    .top_allow {
+    .top_allow,
+    .dark_allow {
         display: none;
         position: sticky;
         width: 4rem;
