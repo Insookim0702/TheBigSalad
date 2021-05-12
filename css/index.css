@@ -160,6 +160,10 @@ a {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+p {
+    word-break: break-all;
+}
+
 .contact {
     font-size: 2rem;
 }

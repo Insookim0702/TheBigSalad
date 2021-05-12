@@ -17,11 +17,13 @@ const WEB_PAGE_TOTAL_HEIGHT = body.scrollHeight;
 const ALLOW_START_OFFSETY = WEB_PAGE_TOTAL_HEIGHT * ALLOW_START_OFFSETY_RATIO;
 const ALLOW_END_OFFSETY = WEB_PAGE_TOTAL_HEIGHT * ALLOW_END_OFFSETY_RATIO;
 
-const SECTION1_START_Y_PX = SECTION[0].clientHeight + 120;
-const SECTION2_START_Y_PX = SECTION1_START_Y_PX + SECTION[1].clientHeight + 100;
+const SECTION1_START_Y_PX = SECTION[0].clientHeight + 100;
+const SECTION2_START_Y_PX = SECTION1_START_Y_PX + SECTION[1].clientHeight;
 const SECTION3_START_Y_PX = SECTION2_START_Y_PX + SECTION[2].clientHeight + 100;
-const SECTION4_START_Y_PX = SECTION3_START_Y_PX + SECTION[3].clientHeight + 120;
-const SECTION_START_Y_PX = [SECTION1_START_Y_PX, SECTION2_START_Y_PX, SECTION3_START_Y_PX, SECTION4_START_Y_PX, WEB_PAGE_TOTAL_HEIGHT];
+const SECTION4_START_Y_PX = SECTION3_START_Y_PX + SECTION[3].clientHeight + 100;
+const SECTION5_START_Y_PX = SECTION4_START_Y_PX + SECTION[4].clientHeight + 120;
+const SECTION6_START_Y_PX = SECTION5_START_Y_PX + SECTION[5].clientHeight + 120;
+const SECTION_START_Y_PX = [SECTION1_START_Y_PX, SECTION2_START_Y_PX, SECTION3_START_Y_PX, SECTION4_START_Y_PX, SECTION5_START_Y_PX, WEB_PAGE_TOTAL_HEIGHT];
 
 function init() {
     const currentDate = new Date();
@@ -101,18 +103,22 @@ function scrollReactContents() {
         }
         if (SECTION2_START_Y_PX < pageYOffset) {
             contentStyle(1);
-            // My Salad Project
+            // The Big Challenge
         }
         if (SECTION3_START_Y_PX < pageYOffset) {
             contentStyle(2);
-            // Alone Study
+            // My Salad Project
         }
         if (SECTION4_START_Y_PX < pageYOffset) {
             contentStyle(3);
+            // Alone Study
+        }
+        if (SECTION5_START_Y_PX < pageYOffset) {
+            contentStyle(4);
             // Skill
         }
         if (WEB_PAGE_TOTAL_HEIGHT < pageYOffset + INNER_HEIGHT) {
-            contentStyle(4);
+            contentStyle(5);
             // Contact
         }
     }

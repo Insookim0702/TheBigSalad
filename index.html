@@ -23,6 +23,7 @@
             <div class="contents_box">
                 <div class="contents">
                     <p class="little_title">Work Experience</p>
+                    <p class="little_title">The Big Challenge</p>
                     <p class="little_title">My Salad Project</p>
                     <p class="little_title">Alone Study</p>
                     <p class="little_title">Skill</p>
@@ -32,20 +33,19 @@
             <section>
                 <h1>안녕하세요,</h1>
                 <h1>저는 김인수입니다<span class="point">.</span></h1>
-
-                <p class="short_discription">수도권에서 <span class="totalCareer"></span>동안 웹 엔지니어로 일하고 있습니다. 멋진 웹 페이지를 발견하면 따라 만들어 보는 것을 좋아합니다. 인터렉티브 웹과 머신러닝에 관심을 가지고 공부하고 있습니다.</p>
+                <p class="short_discription">강남·판교에서 <span class="totalCareer"></span>동안 웹 엔지니어로 일하고 있습니다. 멋진 웹 페이지를 발견하면 따라 만들어 보는 것을 좋아합니다. 바닐라 자바스크립트와 인터렉티브 웹에 관심을 가지고 공부하고 있습니다.</p>
             </section>
             <section>
                 <h2>Work Experience<span class="point">.</span></h2>
                 <div class="experience">
                     <div>
                         <h3>마크베이스<span class="point">.</span></h3>
-                        <p class="position">Frontend Developer<br />2021. 01 - 현재(<span class="currentJobPeriod"></span>)</p>
+                        <p class="position">Frontend Developer<br />2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)</p>
                     </div>
                     <div>
                         <div class="project">
                             <h4>제품 개발<span class="point">.</span></h4>
-                            2021. 01 - 현재(<span class="currentJobPeriod"></span>)
+                            2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)
                             <p class="title3">Description.</p>
                             센서가 감지하는 데이터를 수집하는 서버의 데이터를 시각적으로 보이고 제어하는 웹 애플리케이션을 개발하고 있습니다.
                             <p class="title3">What did I do.</p>
@@ -60,7 +60,7 @@
                 <div class="experience">
                     <div>
                         <h3>브랜디<span class="point">.</span></h3>
-                        <p class="position">web FullStack Developer<br />2020. 11.17 - 2021.01.04(2M)</p>
+                        <p class="position">web FullStack Developer<br />2020. 11. 17 - 2021. 01. 04(2M)</p>
                     </div>
                     <div>
                         <div class="project">
@@ -112,6 +112,50 @@
                             <p class="title3">Tech Stack.</p>
                             HTML, CSS, Javascript, Java, Spring, SVN
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>The Big Challenge<span class=“point”>.</span></h2>
+                <p>프론트엔드 개발자로 일하시면서 도전적인 과제를 수행하신 대표적 사례</p>
+                <div class=“skill”>
+                    <div class=“skill_area”>
+                        <h3>개발자 2명과 협업하기<span class=“point”>.</span></h3>
+                        <p class=“black”>
+                            솔루션 패키지를 일괄 설치를 할 수 있도록 하는 웹이 있습니다. 이 웹은 서버쪽은 계속 요구사항 변경으로 기능과 API응답 데이터가 몇 단계는 버전업되어 있지만, 웹 프론트의 코드는 이 버전에 맞춰서 개발되지 않았습니다.
+                            그래서, 웹이 동작하지 않았습니다. 팀 내에서 저는 버전 업이 되지 않은 웹 프론트 코드 유지보수를 맡아서 진행했습니다. 처음부터 제가 만든 코드가 아닐 뿐더러 개발이 된 지 너무 오래되서, 인수인계 받을 수도 없이 맨 땅에 헤딩하는
+                            심정으로 테스트를 해가면서 오류를 발견하고, 관련 코드를 꼼꼼하게 살핀 뒤에 수정할 부분을 찾고 고치는 작업을 했었습니다. 그런데, 웹 쪽에만 문제가 있으면 좋겠지만, 웹 서버와 센서 서버와의 관련 기능도 재수정이 필요한 부분이었습니다.
+                            관련 로직을 보면, 웹 서버{웹 프론트(나) + 웹 서버(개발자1)} - 센서 서버(개발자2) 이렇습니다.  웹 프론트에서는 센서 장비와 통신 프로토콜 호환이 되지 않아서 중간에 서버를 거쳐서 센서 서버에 패키지 파일을 업로드하거나, 센서 서버의 명령을 내리도록 합니다.
+                            협업 방식은 제가 우선적으로 테스트를 하면서 API 요청과 응답에 맞는 형식에 맞게 요청과 응답을 받을 수 있도록 코드를 수정했습니다.
+                            서버 부분은 go언어로 이루어져 있었고, 담당 백엔드 개발자가 있더라고, 버그가 발견되는 기능의 API를 수행하는 코드를 찾아보고 어느정도 이해하고 백엔드 개발자와 소통해야 해서 시간이 조금 걸렸습니다. 또, 센서 서버 개발자와 프로세스 진행 과정에 log를 웹 프론트가 서버를 통해서 전달받아야 하는 기능이 있는데, 이부분도 버그가 있어서 협업을 하는데, 아무리 찾아도 버그의 원인을 못찾겠어서, 웹 서버 개발자와 얘기 해보니, 센서 서버에서 넘겨주는 데이터를 byte타입으로 변환하는 과정에서 발생한 에러인 것으로 겨우 발견해서 양 쪽 개발자들이 문제를 함꼐 해결 할 수 있도록 제가 방법을 모색했었습니다.
+                        
+                            제가 이번 유지보수를 이끄는 입장이 되서, 제가 문제를 발견하가 우선적으로 웹 프론트 코드를 수정하고 서버 담당 개발자들과 문제를 함꼐 발견하고 해결하는 부분이 시간도 많이 걸리고 처음으로 긴밀히 협업을 하는 경험이었습니다.
+                            소통은 좋았고 서로 적극적이여서 문제없이 잘 해결할 수 있었습니다.
+                        </p>
+                    </div>
+                    <div class=“skill_area”>
+                        <h3>폭발하는 트래픽 감당하기<span class=“point”>.</span></h3>
+                        <p class=“black”>이전에 엔드게임이라는 이벤트에 프론트엔드 개발 담당자로 참여한 적이 있습니다. 최대 만 원 정도의 쿠폰을 랜덤으로 특정 시간 동안만 발급받을 수 있다 보니 정말 많은 사용자분들이 참여했어요.
+                                이벤트 시작 시간이 다가오면 카운트다운이 진행되고 이벤트 발표 시간에 짠! 하고 참여 화면으로 넘어갈 수 있는 그런 플로우를 계획했었죠.
+                                헌데, 너무 많은 사용자가 참여하다 보니 이벤트 시간에 짠! 하고 흰 화면이 나오더라고요. 아직도 그 순간이 기억나네요.. 그 순간에는 아마 제 얼굴도 백지가 됐을 거예요.
+                                api 서버도 프론트엔드 리소스를 불러오는 cdn도 한 번에 몰리는 트래픽으로 인해 서비스가 불가능한 상황이 된 것이었죠. 결국 3일 동안 계획한 이벤트 기간 중 첫날은 이벤트를 진행하지 못했어요.
+                                
+                                둘째날 이벤트를 무사히 진행하기 위해 몰리는 트래픽을 감당할 수 있도록 리소스와 웹 어플리케이션의 최적화를 밤새 진행했던 기억이 생생합니다.
+                                동료들의 많은 아이디어와 조언 그리고 응원 덕분에 둘째날 이벤트는 성공적으로 진행할 수 있었어요. 이벤트 시간에 짠 하고 화면이 떴을 때 사무실을 꽉 채운 박수소리가 지금도 귓가에 들려오는 듯하네요.
+                                높은 트래픽을 잘 이겨내어 좋은 사용자 경험을 제공하기 위해 보다 더 꼼꼼하게 개발을 하게 된 계기가 되었습니다.
+                        </p>
+                    </div>
+                    <div class=“skill_area”>
+                        <h3>원인 파악이 어려운 장애 극복하기<span class=“point”>.</span></h3>
+                        <p class=“black”>
+                            2020년 초 당시 저희 팀에서 담당하고 있던 node 서버에서 반복적인 장애가 일어났습니다. 정말 어떠한 병목도 없어 보였는데 갑자기 부하가 일어나면서 서버가 다운 되었어요.
+                                코드를 아무리 살펴봐도 로직엔 문제가 없어 보이는데 말이죠. 이 장애로 인해 큰 스트레스를 받았어요. 배민에서 상당히 중요한 웹뷰를 제공하는 서버였기 때문이었죠.
+                                
+                                서버를 늘려봐도 동일한 현상이 반복되었었고, SRE 담당자분들의 지원을 받아 모니터링 환경도 구성하면서 함께 정말 많은 로그들을 살펴보았던 것 같습니다.
+                                이런 반복적인 상황이 지속되니 동료들도 저도 심적으로도 육체적으로도 정말 많이 지쳤던 것 같아요. 그래도 계속 원인을 파악하기 위해 포기하지 않고 이것저것 참 많이 시도를 해봤던 것 같아요.
+                                결국 끈질긴 사투 끝에 메모리릭을 발생시키는 원인을 파악하게 되었고 그 지옥의 장애 게이트에서 벗어날 수 있었습니다.
+                                지금 와서 생각해 보면, 장애는 개발자의 능력을 스텝업 시켜준다는 말이 정말 맞는 말 같습니다. 이런 트러블 슈팅들을 겪으면서 배운 것들이 제 스스로에게 너무 소중한 자산이 된 것 같습니다.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -261,6 +305,7 @@
                         <h3>RDBMS<span class="point">.</span></h3>
                         <ul>
                             <li><p class="black">MySQL</p></li>
+                            <li><p class="black">PostgreSQL</p></li>
                         </ul>
                     </div>
                 </div>
