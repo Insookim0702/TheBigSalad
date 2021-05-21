@@ -22,6 +22,19 @@ body {
     letter-spacing: -0.3px;
 }
 
+/* 다크모드 버튼 */
+body.dark .dark_toggle {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+}
+
+body.dark .white_toggle {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 body.dark {
     margin: 0;
     width: 100%;
@@ -164,7 +177,7 @@ a {
     font-size: 2rem;
 }
 
-.top_allow,
+.white_allow,
 .dark_allow {
     display: none;
     position: sticky;
@@ -187,7 +200,19 @@ a {
     }
 
     .dark_toggle {
+        opacity: 1;
         cursor: pointer;
+        width: 50px;
+        transition: opacity 1s;
+    }
+
+    .white_toggle {
+        /* display: none; */
+        visibility: hidden;
+        opacity: 0;
+        cursor: pointer;
+        width: 50px;
+        /* transition: opacity 1s; */
     }
 
     .contents_box {
@@ -301,7 +326,7 @@ a {
         padding: 50px 0px 50px 0px;
     }
 
-    .top_allow,
+    .white_allow,
     .dark_allow {
         display: none;
         position: sticky;
