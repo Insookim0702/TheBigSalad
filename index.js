@@ -1,9 +1,10 @@
 const body = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
-const TOP_Allow = document.querySelector('.top_allow');
+const WHITE_TOGGLE = document.querySelector('.white_toggle');
 const DARK_TOGGLE = document.querySelector('.dark_toggle');
-const DARK_AllOW = document.querySelector('.dark_allow');
+const WHITE_ALLOW = document.querySelector('.white_allow');
+const DARK_ALLOW = document.querySelector('.dark_allow');
 const CONTENTS = document.querySelector('.contents');
 const SECTION = document.querySelectorAll('section');
 const LITTLE_TITLE = document.querySelectorAll('.little_title');
@@ -48,7 +49,7 @@ function init() {
         scrollReactContents();
     });
 
-    TOP_Allow.addEventListener('click', () => {
+    WHITE_ALLOW.addEventListener('click', () => {
         window.scroll({
             behavior: 'smooth',
             left: 0,
@@ -62,11 +63,19 @@ function init() {
         });
     });
 
+    //화이트 모드
     DARK_TOGGLE.addEventListener('click', () => {
+        // setTimeout(()=> {
+        //     DARK_TOGGLE.style.display = 'none';
+        // }, 1001);
+        // DARK_TOGGLE.style.display = 'none';
         document.body.classList.toggle('dark');
+        // WHITE_TOGGLE.style.display = 'block';
+        // WHITE_TOGGLE.style.display = 'block';
+
         IS_DARK_MODE = !IS_DARK_MODE;
         if (IS_DARK_MODE === false) {
-            TOP_Allow.addEventListener('click', () => {
+            WHITE_ALLOW.addEventListener('click', () => {
                 window.scroll({
                     behavior: 'smooth',
                     left: 0,
@@ -74,7 +83,35 @@ function init() {
                 });
             });
         } else {
-            DARK_AllOW.addEventListener('click', () => {
+            DARK_ALLOW.addEventListener('click', () => {
+                window.scroll({
+                    behavior: 'smooth',
+                    left: 0,
+                    top: body.offsetTop,
+                });
+            });
+        }
+    });
+
+    //다크 모드
+    WHITE_TOGGLE.addEventListener('click', () => {
+        // WHITE_TOGGLE.style.display = 'none';
+        document.body.classList.toggle('dark');
+        // setTimeout((WHITE_TOGGLE.style.display = 'block'), 1000);
+        // setTimeout((WHITE_TOGGLE.style.display = 'block'), 1000);
+        // DARK_TOGGLE.style.display = 'block';
+
+        IS_DARK_MODE = !IS_DARK_MODE;
+        if (IS_DARK_MODE === false) {
+            WHITE_ALLOW.addEventListener('click', () => {
+                window.scroll({
+                    behavior: 'smooth',
+                    left: 0,
+                    top: body.offsetTop,
+                });
+            });
+        } else {
+            DARK_ALLOW.addEventListener('click', () => {
                 window.scroll({
                     behavior: 'smooth',
                     left: 0,
@@ -145,17 +182,17 @@ function contentStyle(idx) {
 function scrollReact() {
     if ((pageYOffset + INNER_HEIGHT) / WEB_PAGE_TOTAL_HEIGHT > ALLOW_START_OFFSETY_RATIO) {
         if (IS_DARK_MODE === false) {
-            TOP_Allow.style.display = 'block';
-            TOP_Allow.style.opacity = (pageYOffset + INNER_HEIGHT - ALLOW_END_OFFSETY) / (ALLOW_END_OFFSETY - ALLOW_START_OFFSETY);
+            WHITE_ALLOW.style.display = 'block';
+            WHITE_ALLOW.style.opacity = (pageYOffset + INNER_HEIGHT - ALLOW_END_OFFSETY) / (ALLOW_END_OFFSETY - ALLOW_START_OFFSETY);
         } else {
-            DARK_AllOW.style.display = 'block';
-            DARK_AllOW.style.opacity = (pageYOffset + INNER_HEIGHT - ALLOW_END_OFFSETY) / (ALLOW_END_OFFSETY - ALLOW_START_OFFSETY);
+            DARK_ALLOW.style.display = 'block';
+            DARK_ALLOW.style.opacity = (pageYOffset + INNER_HEIGHT - ALLOW_END_OFFSETY) / (ALLOW_END_OFFSETY - ALLOW_START_OFFSETY);
         }
     } else {
         if (IS_DARK_MODE === false) {
-            TOP_Allow.style.display = 'none';
+            WHITE_ALLOW.style.display = 'none';
         } else {
-            DARK_AllOW.style.display = 'none';
+            DARK_ALLOW.style.display = 'none';
         }
     }
 }
