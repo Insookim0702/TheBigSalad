@@ -65,13 +65,13 @@ function init() {
 
     //화이트 모드
     DARK_TOGGLE.addEventListener('click', () => {
-        // setTimeout(()=> {
-        //     DARK_TOGGLE.style.display = 'none';
-        // }, 1001);
-        // DARK_TOGGLE.style.display = 'none';
-        document.body.classList.toggle('dark');
-        // WHITE_TOGGLE.style.display = 'block';
-        // WHITE_TOGGLE.style.display = 'block';
+        DARK_TOGGLE.style.display = 'none';
+        WHITE_TOGGLE.style.display = 'block';
+        // none처리되어 있는 WHITE_TOGGLE요소를 block처리한 후에
+        // 0.01초 뒤에 transition opacity 1을 실행
+        setTimeout(() => {
+            document.body.classList.toggle('dark');
+        }, 10);
 
         IS_DARK_MODE = !IS_DARK_MODE;
         if (IS_DARK_MODE === false) {
@@ -95,11 +95,11 @@ function init() {
 
     //다크 모드
     WHITE_TOGGLE.addEventListener('click', () => {
-        // WHITE_TOGGLE.style.display = 'none';
-        document.body.classList.toggle('dark');
-        // setTimeout((WHITE_TOGGLE.style.display = 'block'), 1000);
-        // setTimeout((WHITE_TOGGLE.style.display = 'block'), 1000);
-        // DARK_TOGGLE.style.display = 'block';
+        WHITE_TOGGLE.style.display = 'none';
+        DARK_TOGGLE.style.display = 'block';
+        setTimeout(() => {
+            document.body.classList.toggle('dark');
+        }, 10);
 
         IS_DARK_MODE = !IS_DARK_MODE;
         if (IS_DARK_MODE === false) {
@@ -154,7 +154,7 @@ function scrollReactContents() {
             contentStyle(4);
             // Skill
         }
-        if (WEB_PAGE_TOTAL_HEIGHT < pageYOffset + INNER_HEIGHT) {
+        if (WEB_PAGE_TOTAL_HEIGHT <= pageYOffset + INNER_HEIGHT) {
             contentStyle(5);
             // Contact
         }

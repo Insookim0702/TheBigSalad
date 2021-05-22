@@ -1,0 +1,58 @@
+body.dark {
+    margin: 0;
+    width: 100%;
+    /* font-family: Spoqa Han Sans, sans-serif; */
+    font-family: 'Gothic A1', sans-serif;
+    word-break: keep-all;
+    letter-spacing: -0.3px;
+    background: #141718;
+    color: #f7f1e3;
+    transition: all 0.7s;
+}
+
+/* 다크모드 버튼 */
+body.dark .dark_toggle {
+    display: none;
+    opacity: 0;
+}
+
+body.dark .white_toggle {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+body.dark nav {
+    height: 10px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #b33939, #ffb142);
+}
+
+body.dark .black {
+    color: #f7f1e3;
+}
+
+body.dark a {
+    color: #ffb142;
+}
+
+body.dark li {
+    color: #ffb142;
+}
+
+body.dark .point {
+    /* font-size: 3rem; */
+    background: -webkit-linear-gradient(left, #b33939, #ffb142);
+    background: -moz-linear-gradient(right, #b33939, #ffb142);
+    background: -o-linear-gradient(right, #b33939, #ffb142);
+    background: linear-gradient(to right, #b33939, #ffb142);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body.dark ::selection {
+    background-color: #ffb142;
+    color: black;
+}
