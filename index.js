@@ -1,4 +1,4 @@
-const body = document.body;
+const BODY = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
 const WHITE_TOGGLE = document.querySelector('.white_toggle');
@@ -14,7 +14,7 @@ const ALLOW_START_OFFSETY_RATIO = 0.6;
 const ALLOW_END_OFFSETY_RATIO = 0.7;
 
 const INNER_HEIGHT = window.innerHeight;
-const WEB_PAGE_TOTAL_HEIGHT = body.scrollHeight;
+const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
 const ALLOW_START_OFFSETY = WEB_PAGE_TOTAL_HEIGHT * ALLOW_START_OFFSETY_RATIO;
 const ALLOW_END_OFFSETY = WEB_PAGE_TOTAL_HEIGHT * ALLOW_END_OFFSETY_RATIO;
 
@@ -53,7 +53,7 @@ function init() {
         window.scroll({
             behavior: 'smooth',
             left: 0,
-            top: body.offsetTop,
+            top: BODY.offsetTop,
         });
     });
 
@@ -79,7 +79,7 @@ function init() {
                 window.scroll({
                     behavior: 'smooth',
                     left: 0,
-                    top: body.offsetTop,
+                    top: BODY.offsetTop,
                 });
             });
         } else {
@@ -87,7 +87,7 @@ function init() {
                 window.scroll({
                     behavior: 'smooth',
                     left: 0,
-                    top: body.offsetTop,
+                    top: BODY.offsetTop,
                 });
             });
         }
@@ -107,7 +107,7 @@ function init() {
                 window.scroll({
                     behavior: 'smooth',
                     left: 0,
-                    top: body.offsetTop,
+                    top: BODY.offsetTop,
                 });
             });
         } else {
@@ -115,7 +115,7 @@ function init() {
                 window.scroll({
                     behavior: 'smooth',
                     left: 0,
-                    top: body.offsetTop,
+                    top: BODY.offsetTop,
                 });
             });
         }
@@ -154,7 +154,7 @@ function scrollReactContents() {
             contentStyle(4);
             // Skill
         }
-        if (WEB_PAGE_TOTAL_HEIGHT <= pageYOffset + INNER_HEIGHT) {
+        if (SECTION6_START_Y_PX < pageYOffset + INNER_HEIGHT) {
             contentStyle(5);
             // Contact
         }
