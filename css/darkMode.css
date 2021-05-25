@@ -23,7 +23,7 @@ body.dark .white_toggle {
 
 body.dark nav {
     height: 10px;
-    position: sticky;
+    position: nav;
     top: 0;
     background: linear-gradient(to right, #b33939, #ffb142);
 }
