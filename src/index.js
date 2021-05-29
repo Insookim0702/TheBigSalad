@@ -1,3 +1,10 @@
+import './css/animation.css';
+import './css/darkMode.css';
+import './css/index.css';
+import dark_allow from './img/dark_allow.png';
+import dark from './img/dark.png';
+import withe from './img/white.png';
+import withe_allow from './img/white_allow.png';
 const BODY = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
