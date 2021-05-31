@@ -30,7 +30,7 @@ const SECTION2_START_Y_PX = SECTION1_START_Y_PX + SECTION[1].clientHeight;
 const SECTION3_START_Y_PX = SECTION2_START_Y_PX + SECTION[2].clientHeight + 100;
 const SECTION4_START_Y_PX = SECTION3_START_Y_PX + SECTION[3].clientHeight + 100;
 const SECTION5_START_Y_PX = SECTION4_START_Y_PX + SECTION[4].clientHeight + 120;
-const SECTION6_START_Y_PX = SECTION5_START_Y_PX + SECTION[5].clientHeight + 400;
+const SECTION6_START_Y_PX = SECTION5_START_Y_PX + SECTION[5].clientHeight;
 const SECTION_START_Y_PX = [SECTION1_START_Y_PX, SECTION2_START_Y_PX, SECTION3_START_Y_PX, SECTION4_START_Y_PX, SECTION5_START_Y_PX, WEB_PAGE_TOTAL_HEIGHT];
 
 function init() {
@@ -161,7 +161,7 @@ function scrollReactContents() {
             contentStyle(4);
             // Skill
         }
-        if (SECTION6_START_Y_PX < pageYOffset + INNER_HEIGHT) {
+        if (SECTION6_START_Y_PX < pageYOffset) {
             contentStyle(5);
             // Contact
         }
