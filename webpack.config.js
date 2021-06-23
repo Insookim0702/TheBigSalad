@@ -22,6 +22,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
+                            publicPath: './docs',
                             name: '[name].[ext]?[hash]',
                         },
                     },

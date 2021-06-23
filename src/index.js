@@ -1,10 +1,10 @@
 import './css/animation.css';
 import './css/darkMode.css';
 import './css/index.css';
-import dark_allow from './img/dark_allow.png';
-import dark from './img/dark.png';
-import withe from './img/white.png';
-import withe_allow from './img/white_allow.png';
+import './img/dark_allow.png';
+import './img/dark.png';
+import './img/white.png';
+import './img/white_allow.png';
 const BODY = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
@@ -25,23 +25,38 @@ const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
 const ALLOW_START_OFFSETY = WEB_PAGE_TOTAL_HEIGHT * ALLOW_START_OFFSETY_RATIO;
 const ALLOW_END_OFFSETY = WEB_PAGE_TOTAL_HEIGHT * ALLOW_END_OFFSETY_RATIO;
 
-const SECTION1_START_Y_PX = SECTION[0].clientHeight + 100;
-const SECTION2_START_Y_PX = SECTION1_START_Y_PX + SECTION[1].clientHeight;
-const SECTION3_START_Y_PX = SECTION2_START_Y_PX + SECTION[2].clientHeight + 100;
-const SECTION4_START_Y_PX = SECTION3_START_Y_PX + SECTION[3].clientHeight + 100;
-const SECTION5_START_Y_PX = SECTION4_START_Y_PX + SECTION[4].clientHeight + 120;
-const SECTION6_START_Y_PX = SECTION5_START_Y_PX + SECTION[5].clientHeight;
-const SECTION_START_Y_PX = [SECTION1_START_Y_PX, SECTION2_START_Y_PX, SECTION3_START_Y_PX, SECTION4_START_Y_PX, SECTION5_START_Y_PX, WEB_PAGE_TOTAL_HEIGHT];
+const SECTION1_START_Y_PX = SECTION[0].clientHeight;
+const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].clientHeight + 200;
+const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight + 200;
+const MY_SALAD_PROJECT = THE_BIG_CHALLENGE + SECTION[3].clientHeight + 100;
+const ALONE_STUDY = MY_SALAD_PROJECT + SECTION[4].clientHeight + 100;
+const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
+console.log(`SECTION1_START_Y_PX`, SECTION1_START_Y_PX);
+console.log(`SECTION[1].clientHeight`, SECTION[1].clientHeight);
 
+console.log(`WORK_EXPERIENCE`, WORK_EXPERIENCE);
+console.log(`SECTION[2].clientHeight`, SECTION[2].clientHeight);
+
+console.log(`THE_BIG_CHALLENGE`, THE_BIG_CHALLENGE);
+console.log(`MY_SALAD_PROJECT`, MY_SALAD_PROJECT);
+console.log(`ALONE_STUDY`, ALONE_STUDY);
+console.log(`SKILL`, SKILL);
+console.log(`WEB_PAGE_TOTAL_HEIGHT`, WEB_PAGE_TOTAL_HEIGHT);
+const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, MY_SALAD_PROJECT, ALONE_STUDY, WEB_PAGE_TOTAL_HEIGHT];
+const currentDate = new Date();
+const wisenutPeriod = 17;
+const brandiPeriod = 2;
+const machbaseJobStartDate = new Date(2021, 1, 25);
+const diffMonth = currentDate.getMonth() - machbaseJobStartDate.getMonth() + 1;
+const diffYear = currentDate.getFullYear() - machbaseJobStartDate.getFullYear();
+
+function calcTotalCareer() {
+    const calcResultYear = `${Math.floor((wisenutPeriod + brandiPeriod + diffMonth) / 12) + diffYear}년`;
+    const calcResultMonth = `${(wisenutPeriod + brandiPeriod + diffMonth) % 12 === 0 ? '' : `${(wisenutPeriod + brandiPeriod + diffMonth) % 12}개월`}`;
+    totalCareer.innerText = `${calcResultYear}${calcResultMonth}`;
+}
 function init() {
-    const currentDate = new Date();
-    const machbaseJobStartDate = new Date(2021, 1, 25);
-    const wisenutPeriod = 15;
-    const brandiPeriod = 2;
-    const diffMonth = currentDate.getMonth() - machbaseJobStartDate.getMonth() + 1;
-    const diffYear = currentDate.getFullYear() - machbaseJobStartDate.getFullYear();
-    totalCareer.innerText = `${Math.floor((wisenutPeriod + brandiPeriod + diffMonth) / 12) + diffYear}년 ${(wisenutPeriod + brandiPeriod + diffMonth) % 12}개월`;
-
+    calcTotalCareer();
     currentJobPeriod.forEach((aItem) => {
         let period = '';
         if (diffYear > 0) {
@@ -52,6 +67,8 @@ function init() {
     });
 
     window.addEventListener('scroll', () => {
+        console.log('scrollY', scrollY);
+        console.log('pageYOffset', pageYOffset);
         scrollReact();
         scrollReactContents();
     });
@@ -130,7 +147,7 @@ function init() {
 }
 
 function scrollReactContents() {
-    if (pageYOffset < 380) {
+    if (pageYOffset < SECTION1_START_Y_PX) {
         CONTENTS.style.position = 'absolute';
         CONTENTS.style.top = '0px';
         LITTLE_TITLE.forEach((element, index) => {
@@ -142,26 +159,30 @@ function scrollReactContents() {
         CONTENTS.style.position = 'fixed';
         CONTENTS.style.top = '100px';
         if (SECTION1_START_Y_PX < pageYOffset) {
+            console.log(`${SECTION1_START_Y_PX} < ${pageYOffset}`);
             contentStyle(0);
             // Work Experience
         }
-        if (SECTION2_START_Y_PX < pageYOffset) {
+        if (WORK_EXPERIENCE < pageYOffset) {
+            console.log(`${WORK_EXPERIENCE} < ${pageYOffset}`);
             contentStyle(1);
             // The Big Challenge
         }
-        if (SECTION3_START_Y_PX < pageYOffset) {
+        if (THE_BIG_CHALLENGE < pageYOffset) {
+            console.log(`${THE_BIG_CHALLENGE} < ${pageYOffset}`);
             contentStyle(2);
             // My Salad Project
         }
-        if (SECTION4_START_Y_PX < pageYOffset) {
+        if (MY_SALAD_PROJECT < pageYOffset) {
             contentStyle(3);
             // Alone Study
         }
-        if (SECTION5_START_Y_PX < pageYOffset) {
+        if (ALONE_STUDY < pageYOffset) {
             contentStyle(4);
             // Skill
         }
-        if (SECTION6_START_Y_PX < pageYOffset) {
+        if (WEB_PAGE_TOTAL_HEIGHT - 200 < pageYOffset) {
+            console.log(`${WEB_PAGE_TOTAL_HEIGHT} < ${pageYOffset + innerHeight}`);
             contentStyle(5);
             // Contact
         }
