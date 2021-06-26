@@ -27,6 +27,7 @@ nav {
 body {
     margin: 0;
     width: 100%;
+    background-color: rgb(238, 236, 236);
     /* font-family: Spoqa Han Sans, sans-serif; */
     font-family: 'Gothic A1', sans-serif;
     word-break: keep-all;
@@ -46,7 +47,7 @@ h2 {
     font-size: 2.3rem;
     line-height: 2;
     line-height: 0.7;
-    width: 60vw;
+    width: 100%;
 }
 
 h3 {
@@ -104,7 +105,7 @@ p {
 }
 
 .container {
-    margin: auto;
+    /* margin: auto; */
     padding: 0 20px;
 }
 
@@ -161,12 +162,21 @@ p {
     cursor: pointer;
 }
 
-.contents {
+.side_content {
     display: none;
 }
 
 section {
-    padding-top: 5em;
+    padding: 5rem 0;
+}
+.contact_button {
+    position: sticky;
+    top: 2px;
+    width: 2rem;
+}
+
+.tech_logo {
+    width: 3rem;
 }
 
 @media (min-width: 700px) {
@@ -253,7 +263,7 @@ section {
     }
 
     .position {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin: 15px 0px 40px 0px;
         line-height: 1.2;
     }
@@ -271,11 +281,55 @@ section {
 }
 
 @media (min-width: 1300px) {
-    .contents_box {
-        position: absolute;
-        top: 480px;
+    .grid-box {
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        width: 100%;
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    .side_content {
+        display: block;
+    }
+
+    .content_sticky_box {
+        position: -webkit-sticky;
         width: 200px;
-        right: 120px;
+        position: sticky;
+        top: 19rem;
+        margin-left: 20px;
+        margin-top: 540px;
+    }
+
+    .contact_box {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem;
+        font-size: 1rem;
+        left: 20px;
+        width: 200px;
+        background-color: white;
+        box-shadow: 1px 2px 5px rgb(161, 161, 161);
+        border-radius: 8px;
+        border: 1px solid rgb(221, 219, 219);
+    }
+
+    .email {
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        overflow: visible;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .email:focus {
+        outline: none;
     }
 
     .contents {
@@ -292,8 +346,12 @@ section {
         cursor: pointer;
     }
 }
+
+.copyEmail {
+    width: 1.4em;
+}
 @media (min-width: 1551px) {
-    .contents_box {
+    .side_content {
         right: 12vw;
     }
     .dark_button_box {

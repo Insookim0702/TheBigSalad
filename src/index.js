@@ -5,6 +5,13 @@ import './img/dark_allow.png';
 import './img/dark.png';
 import './img/white.png';
 import './img/white_allow.png';
+import './img/github.png';
+import './img/vue.png';
+import './img/gitlab.png';
+import './img/spring.png';
+import './img/java.png';
+import './img/javascript.png';
+import './img/copy_icon.png';
 const BODY = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
@@ -12,8 +19,9 @@ const WHITE_TOGGLE = document.querySelector('.white_toggle');
 const DARK_TOGGLE = document.querySelector('.dark_toggle');
 const WHITE_ALLOW = document.querySelector('.white_allow');
 const DARK_ALLOW = document.querySelector('.dark_allow');
-const CONTENTS = document.querySelector('.contents');
+const CONTENTS = document.querySelector('.contents_box');
 const SECTION = document.querySelectorAll('section');
+const BUTTON_COPY_EMAIL = document.querySelector('.contact_box');
 const LITTLE_TITLE = document.querySelectorAll('.little_title');
 let IS_DARK_MODE = false;
 
@@ -31,17 +39,6 @@ const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight + 200;
 const MY_SALAD_PROJECT = THE_BIG_CHALLENGE + SECTION[3].clientHeight + 100;
 const ALONE_STUDY = MY_SALAD_PROJECT + SECTION[4].clientHeight + 100;
 const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
-console.log(`SECTION1_START_Y_PX`, SECTION1_START_Y_PX);
-console.log(`SECTION[1].clientHeight`, SECTION[1].clientHeight);
-
-console.log(`WORK_EXPERIENCE`, WORK_EXPERIENCE);
-console.log(`SECTION[2].clientHeight`, SECTION[2].clientHeight);
-
-console.log(`THE_BIG_CHALLENGE`, THE_BIG_CHALLENGE);
-console.log(`MY_SALAD_PROJECT`, MY_SALAD_PROJECT);
-console.log(`ALONE_STUDY`, ALONE_STUDY);
-console.log(`SKILL`, SKILL);
-console.log(`WEB_PAGE_TOTAL_HEIGHT`, WEB_PAGE_TOTAL_HEIGHT);
 const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, MY_SALAD_PROJECT, ALONE_STUDY, WEB_PAGE_TOTAL_HEIGHT];
 const currentDate = new Date();
 const wisenutPeriod = 17;
@@ -50,13 +47,15 @@ const machbaseJobStartDate = new Date(2021, 1, 25);
 const diffMonth = currentDate.getMonth() - machbaseJobStartDate.getMonth() + 1;
 const diffYear = currentDate.getFullYear() - machbaseJobStartDate.getFullYear();
 
-function calcTotalCareer() {
-    const calcResultYear = `${Math.floor((wisenutPeriod + brandiPeriod + diffMonth) / 12) + diffYear}년`;
+function calcTotalCareerPeriod() {
+    const calcResultYear = `${Math.floor((wisenutPeriod + brandiPeriod + diffMonth) / 12) + diffYear + 1}`;
     const calcResultMonth = `${(wisenutPeriod + brandiPeriod + diffMonth) % 12 === 0 ? '' : `${(wisenutPeriod + brandiPeriod + diffMonth) % 12}개월`}`;
-    totalCareer.innerText = `${calcResultYear}${calcResultMonth}`;
+    totalCareer.innerText = `${calcResultYear}년 차`;
 }
+
 function init() {
-    calcTotalCareer();
+    console.log(BUTTON_COPY_EMAIL);
+    calcTotalCareerPeriod();
     currentJobPeriod.forEach((aItem) => {
         let period = '';
         if (diffYear > 0) {
@@ -67,8 +66,6 @@ function init() {
     });
 
     window.addEventListener('scroll', () => {
-        console.log('scrollY', scrollY);
-        console.log('pageYOffset', pageYOffset);
         scrollReact();
         scrollReactContents();
     });
@@ -144,32 +141,44 @@ function init() {
             });
         }
     });
+
+    BUTTON_COPY_EMAIL.addEventListener('click', () => {
+        copyEmail();
+    });
+}
+
+function copyEmail() {
+    const email = document.querySelector('.email');
+    email.select();
+    const isCopy = document.execCommand('copy');
+    if (isCopy === true) {
+        alert('복사 되었습니다.');
+    } else {
+        alert('복사 실패');
+    }
 }
 
 function scrollReactContents() {
     if (pageYOffset < SECTION1_START_Y_PX) {
-        CONTENTS.style.position = 'absolute';
-        CONTENTS.style.top = '0px';
+        // CONTENTS.style.position = 'fixed';
+        // CONTENTS.style.top = '470px';
         LITTLE_TITLE.forEach((element, index) => {
             element.style.color = '#bdc3c7';
             element.style.transform = 'scale(1)';
             element.style.marginLeft = '0px';
         });
     } else {
-        CONTENTS.style.position = 'fixed';
-        CONTENTS.style.top = '100px';
+        // CONTENTS.style.position = 'fixed';
+        // CONTENTS.style.top = '100px';
         if (SECTION1_START_Y_PX < pageYOffset) {
-            console.log(`${SECTION1_START_Y_PX} < ${pageYOffset}`);
             contentStyle(0);
             // Work Experience
         }
         if (WORK_EXPERIENCE < pageYOffset) {
-            console.log(`${WORK_EXPERIENCE} < ${pageYOffset}`);
             contentStyle(1);
             // The Big Challenge
         }
         if (THE_BIG_CHALLENGE < pageYOffset) {
-            console.log(`${THE_BIG_CHALLENGE} < ${pageYOffset}`);
             contentStyle(2);
             // My Salad Project
         }
@@ -182,7 +191,6 @@ function scrollReactContents() {
             // Skill
         }
         if (WEB_PAGE_TOTAL_HEIGHT - 200 < pageYOffset) {
-            console.log(`${WEB_PAGE_TOTAL_HEIGHT} < ${pageYOffset + innerHeight}`);
             contentStyle(5);
             // Contact
         }
