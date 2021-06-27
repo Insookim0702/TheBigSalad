@@ -6,15 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="icon-salad.ico">
         <title>이력서 - 김인수</title>
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/darkMode.css" />
-        <link rel="stylesheet" href="css/animation.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@600&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav></nav>
@@ -25,7 +22,6 @@
                 <div class="dark_button_box">
                     <img class="dark_toggle" src="./dark.png" alt="">
                     <img class="white_toggle" src="./white.png" alt="">
-                    <!-- <div class="dark_toggle">다크 테마</div> -->
                 </div>
                 
                 <section class="section_1">
@@ -36,38 +32,54 @@
                 <section>
                     <h2>Work Experience<span class="point">.</span></h2>
                     <div class="experience">
-                        <div>
+                        <div class="company_info">
                             <h3>마크베이스<span class="point">.</span></h3>
-                            <p class="position">Frontend Engineer<br />2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)</p>
-                            <img class="tech_logo" src="./vue.png" alt="">
-                            <img class="tech_logo" src="./gitlab.png" alt="">
-                        </div>
-                        <div>
-                            <div class="project">
-                                <h4>제품 개발<span class="point">.</span></h4>
-                                2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)
-                                <p class="title3">담당 업무</p>
-                                센서 장비를 등록하고, 센서가 수집한 데이터를 시각화하고 리포트 페이지를 보여주는 웹 솔루션을 개발하고 있습니다.
-                                제품의 프론트엔드 개발 담당이 저 뿐이여서 버그·요구사항·개선을 혼자 처리하고 있습니다.
-                                사용성이 더 좋은 제품으로 만들기 위해서 기능을 개선하고 버그가 없는지 수시로 테스트를 진행합니다.
+                            <p class="position">Frontend Engineer<br> 2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)</p>
+                            <p class="title3">담당 업무</p>
+                                회사 제품 'edgemaster 웹 솔루션'의 웹 개발하고 있습니다.<br>
+                                버그·요구사항·개선을 처리하고 있습니다.
+                                사용성이 더 좋은 제품으로 만들기 위해서 기능을 개선하고 버그가 없는지 테스트를 진행합니다.
                                 기능 뿐만 아니라 제품 코드 품질을 높이기 위해서 강의를 통해서 학습한 내용이나 토이 프로젝트를 만들면서 배운 점들을 점진적으로 제품에 적용하고 팀 내에 공유하고 있습니다.
     
-    
-                                <br><br>
-                                <p class="title3">버그 대처 방법</p>
+                            
+                        </div>
+                        <div class="projects">
+                            <div class="project">
+                                <h4 class="project_name">프로젝트명 : edgemaster<span class="point">.</span></h4>
+                                <br>기간 : 2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)<br>
+                                edgemaster는 공장 기계에 부착된 센서를 제어/이상 감지/데이터 수집/데이터 시각화 기능을 제공하는 웹 솔루션입니다. 
+                                
+                                <br><br>기능 : 
+                                <ul>
+                                    <li><p class="black">센서 장비 등록/제거</p></li>
+                                    <li><p class="black">센서 이상 감지 상황 표시 및 알림 및 이메일 전송</p></li>
+                                    <li><p class="black">센서 데이터 시각화 차트</p></li>
+                                    <li><p class="black">날짜 기간/센서 타입/데이터 타입 조건 선택으로 리포트 조회 페이지</p></li>
+                                    <li><p class="black">센서 데이터 리포트를 위한 chart 페이지</p></li>
+                                    <li><p class="black">센서 장비 등록 위치를 map으로 마킹 및 조회</p></li>
+                                </ul>
+
+                                <!-- <h4>프로젝트 기간<span class="point">.</span></h4>
+                                2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>) -->
+                                <h5>개발 환경<span class="point">.</span></h5>
+                                <img class="tech_logo" src="./gitlab.png" alt="">
+                                <h5>개발 언어/패키지<span class="point">.</span></h5>
+                                <img class="tech_logo" src="./vue.png" alt="">
+                                HTML, SCSS, Javascript, Vue.js, Gitlab
+                                <h5>상세 업무<span class="point">.</span></h5>
+                    
+                                <p class="title3">버그 수정</p>
                                 100% 제가 개발한 코드가 아니기 때문에 코드의 의도를 먼저 봅니다. 코드가 작용하는 유효 범위 영역(scope)을 확인하고, 웹 문제인지 서버 문제인지 판단합니다. 
                                 서버에 문제가 있는 경우, 확실히 서버 코드 로직이 문제인지 서버 코드를 확인합니다. 맞다고 판단되면, 로직을 보여주고 어떤 코드가 문제인지 백엔드 개발자와 소통해서 수정합니다.
     
     
-                                <br><br><p class="title3">개선 및 기능 개발 방법</p>
-                                주로 codesandbox에서 먼저 프로토타입으로 개발해보고 현재 사용하고 있는 패키지나 로직만으로 해결가능한지 테스트합니다. 
+                                <br><br><p class="title3">개선</p>
+                                codesandbox에서 먼저 프로토타입으로 개발해보고 현재 사용하고 있는 패키지나 로직만으로 해결가능한지 테스트합니다. 
                                 외부 패키지를 사용해야 하는 경우, 역시 프로토타입을 진행해 보고 문서 확인해서 기획대로 커스텀이 가능한지 확인합니다.
                                 기획 의도대로 개발이 가능한 패키지라면, 팀장님과 협의 후, 제품 개발을 진행합니다.
-    
-    
                                 이슈가 발생하면 기획/개발/디자인 동료들과 함께 고민하고 해결책을 찾아나갑니다.
-                                <p class="title3">Tech Stack.</p>
-                                HTML, SCSS, Javascript, Vue.js, Gitlab
+                                <br><br><p class="title3">기능 개발</p>
+
                             </div>
                         </div>
                     </div>
