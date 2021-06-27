@@ -1,6 +1,7 @@
 import './css/animation.css';
 import './css/darkMode.css';
 import './css/index.css';
+import './css/title_size.css';
 import './img/dark_allow.png';
 import './img/dark.png';
 import './img/white.png';
@@ -54,7 +55,6 @@ function calcTotalCareerPeriod() {
 }
 
 function init() {
-    console.log(BUTTON_COPY_EMAIL);
     calcTotalCareerPeriod();
     currentJobPeriod.forEach((aItem) => {
         let period = '';

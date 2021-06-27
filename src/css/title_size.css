@@ -1,0 +1,12 @@
+.title3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 0px 5px 0px;
+}
+
+@media (min-width: 700px) {
+    .title3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
