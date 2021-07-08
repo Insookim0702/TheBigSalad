@@ -1,0 +1,62 @@
+article {
+    display: none;
+    padding-top: 1rem;
+    padding-bottom: 7rem;
+}
+.article_title {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.article_title:hover {
+    transform: scale(1.02);
+}
+
+pre {
+    margin: 0;
+}
+
+.career_tech_img {
+    padding-top: 1rem;
+    width: 100%;
+    cursor: zoom-in;
+}
+
+.small {
+    font-size: 0.8rem;
+    color: gray;
+    text-align: center;
+}
+
+.img_box {
+    padding-bottom: 3rem;
+}
+
+.article_section {
+    padding-top: 2rem;
+}
+
+h5 {
+    margin: 0;
+    padding: 0.7rem 0;
+}
+
+.skill_box {
+    border: 2px solid aquamarine;
+    border-radius: 3px;
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    background-color: rgb(241, 241, 241);
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.skill_badge {
+    background-color: rgb(193, 255, 234);
+    padding: 5px;
+    font-size: 1rem;
+    color: black;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgb(175, 185, 182);
+}

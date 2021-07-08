@@ -12,8 +12,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/monokai_sublime.min.css"> <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"> -->
     </head>
     <body>
+        <div class="modal">
+            <div class="modal_header">
+                <button>&times;</button>
+            </div>
+            <img class="modal_img" src="" alt="" />
+        </div>
         <nav></nav>
         
         <div class="grid-box">
@@ -27,7 +40,8 @@
                 <section class="section_1">
                     <h1>안녕하세요,</h1>
                     <h1>저는 김인수입니다<span class="point">.</span></h1>
-                    <p class="short_discription">강남·판교에서 <span class="totalCareer"></span> 웹 엔지니어로 일하고 있습니다. 실무에서 주어진 문제를 구체적으로 어떤 기술을 사용해서 해결할 지를 고민하고 해결합니다. 배우고 공부합니다.</p>
+                    <p class="short_discription">강남·판교에서 <span class="totalCareer"></span> 웹 엔지니어로 일하고 있습니다. 
+                        실무에서 주어진 문제를 구체적으로 어떤 기술을 사용해서 해결할 지를 고민하고 해결합니다. Javascript 풀스택 개발자를 목표로 공부하고 있습니다.</p>
                 </section>
                 <section>
                     <h2>Work Experience<span class="point">.</span></h2>
@@ -37,87 +51,289 @@
                             <p class="position">Frontend Engineer<br> 2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)</p>
                             <p class="title3">담당 업무</p>
                                 회사 제품 'edgemaster 웹 솔루션'의 웹 개발하고 있습니다.<br>
-                                버그·요구사항·개선을 처리하고 있습니다.
-                                사용성이 더 좋은 제품으로 만들기 위해서 기능을 개선하고 버그가 없는지 테스트를 진행합니다.
+                                버그·요구사항을 수정하고, 제가 이 제품을 위해서 할 수 있는 일을 스스로 찾아서 작업합니다.
+                                사용성이 더 좋은 제품으로 만들기 위해서 기능을 개선하고 버그를 수정합니다.
                                 기능 뿐만 아니라 제품 코드 품질을 높이기 위해서 강의를 통해서 학습한 내용이나 토이 프로젝트를 만들면서 배운 점들을 점진적으로 제품에 적용하고 팀 내에 공유하고 있습니다.
-    
-                            
                         </div>
                         <div class="projects">
                             <div class="project">
-                                <h4 class="project_name">프로젝트명 : edgemaster<span class="point">.</span></h4>
+                                <h4 class="project_name">프로젝트명 : edgemaster</h4>
                                 <br>기간 : 2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>)<br>
                                 edgemaster는 공장 기계에 부착된 센서를 제어/이상 감지/데이터 수집/데이터 시각화 기능을 제공하는 웹 솔루션입니다. 
                                 
                                 <br><br>기능 : 
                                 <ul>
-                                    <li><p class="black">센서 장비 등록/제거</p></li>
-                                    <li><p class="black">센서 이상 감지 상황 표시 및 알림 및 이메일 전송</p></li>
+                                    <li><p class="black">센서를 웹 솔루션 서버에 등록/제거</p></li>
+                                    <li><p class="black">센서 이상 감지 상황 표시, 알림 및 이메일 전송</p></li>
                                     <li><p class="black">센서 데이터 시각화 차트</p></li>
                                     <li><p class="black">날짜 기간/센서 타입/데이터 타입 조건 선택으로 리포트 조회 페이지</p></li>
                                     <li><p class="black">센서 데이터 리포트를 위한 chart 페이지</p></li>
-                                    <li><p class="black">센서 장비 등록 위치를 map으로 마킹 및 조회</p></li>
+                                    <li><p class="black">센서 장비 등록 위치를 map(이미지)에 마킹 및 조회</p></li>
                                 </ul>
 
                                 <!-- <h4>프로젝트 기간<span class="point">.</span></h4>
                                 2021. 01. 25 - 현재(<span class="currentJobPeriod"></span>) -->
                                 <h5>개발 환경<span class="point">.</span></h5>
-                                <img class="tech_logo" src="./gitlab.png" alt="">
+                                <ul class="skill_box">
+                                    <li class="skill_badge">Linux</li>
+                                    <li class="skill_badge">Gitlab</li>
+                                    <li class="skill_badge">VSCode</li>
+                                </ul>
                                 <h5>개발 언어/패키지<span class="point">.</span></h5>
-                                <img class="tech_logo" src="./vue.png" alt="">
-                                HTML, SCSS, Javascript, Vue.js, Gitlab
+                                <ul class="skill_box">
+                                    <li class="skill_badge">Vue.js</li>
+                                    <li class="skill_badge">Vuetify</li>
+                                    <li class="skill_badge">SCSS</li>
+                                    <li class="skill_badge">JQuery</li>
+                                    <li class="skill_badge">SQLite</li>
+                                    <!-- <li class="skill_badge">golang-echo framework</li> -->
+                                </ul>
                                 <h5>상세 업무<span class="point">.</span></h5>
                     
                                 <p class="title3">버그 수정</p>
                                 100% 제가 개발한 코드가 아니기 때문에 코드의 의도를 먼저 봅니다. 코드가 작용하는 유효 범위 영역(scope)을 확인하고, 웹 문제인지 서버 문제인지 판단합니다. 
                                 서버에 문제가 있는 경우, 확실히 서버 코드 로직이 문제인지 서버 코드를 확인합니다. 맞다고 판단되면, 로직을 보여주고 어떤 코드가 문제인지 백엔드 개발자와 소통해서 수정합니다.
+                                <ul>
+                                    <li>필터 목록 페이지 기능 버그 문제 해결</li>
+                                </ul>
     
-    
-                                <br><br><p class="title3">개선</p>
+                                <br><br><p class="title3">주요 개선</p>
                                 codesandbox에서 먼저 프로토타입으로 개발해보고 현재 사용하고 있는 패키지나 로직만으로 해결가능한지 테스트합니다. 
-                                외부 패키지를 사용해야 하는 경우, 역시 프로토타입을 진행해 보고 문서 확인해서 기획대로 커스텀이 가능한지 확인합니다.
-                                기획 의도대로 개발이 가능한 패키지라면, 팀장님과 협의 후, 제품 개발을 진행합니다.
-                                이슈가 발생하면 기획/개발/디자인 동료들과 함께 고민하고 해결책을 찾아나갑니다.
+                                외부 패키지를 사용해야 하는 경우, 
+                                역시 문서 확인과 프로토타입을 진행해서 설계 요구사항에 맞게 사용할 수 있는지 확인합니다.
+                                기획 의도대로 개발이 가능한 패키지라면, 팀장님과 협의를 하고 제품 개발을 진행합니다.
+                                이슈가 발생하면 기획/개발/디자인 팀원들과 함께 고민하고 해결책을 찾아나갑니다.
+                                <br><br>
+                                저는 이 회사에서 누구보다 이 제품을 애정합니다.
+                                아래의 개선 목록들은 제품이 더 좋은 제품이 될 수 있도록 제가 스스로 해야겠다고 마음을 먹고 작업한 내용입니다.
+                                <ul>
+                                    <li class="article_title no_drag">코드 퀄리티 향상 - Vue-CLI 기본 스펙을 사용한 개발 환경 자동 세팅</li>
+                                    <article>
+                                            Vue-cli 빌드 환경 설정 기능을 사용해서 개발 생산성을 높이는데 기여했습니다.
+                                            <p>'development'일 때, 로그인에 필요한 데이터를 브라우저에 자동으로 입력되게 했고, host도 개발환경일 때 ip가 설정되도록 해서 더 편한 개발환경을 만들었습니다.</p>
+                                            <ul>
+                                                <li class="black">개발환경일 때 로그인 자동화</li>
+                                                <li class="black">개발환경일 때 호스트 설정 자동화</li>
+                                            </ul>    
+                                        <div class="article_section">
+                                            <h5>문제</h5>
+                                            <ol>
+                                                <li class="black">개발환경인데, 매번 코드를 작성하고 개발 페이지를 확인할 때에 로그인을 해야했습니다.</li>
+                                                <li class="black">master branch에서 새로 분기한 branch에서는 매 번, 서버 host를 코드 베이스에서 직접 변경해 주어야하는 불편함이 문제라고 인식했습니다.</li> 
+                                                <li class="black">항상 커밋 변경 파일 목록에 호스트를 변경한 파일이 목록에 있어서 커밋을 할 때 주의가 필요했습니다.</li>
+                                            </ol>
+                                        </div>
+                                        <div class="article_section">
+                                            <h5>해결 방법</h5>
+                                            <p>
+                                                <strong>Vue-CLI의 기본 명령어 실행에 따라서 환경변수가 설정되는 스펙 사용.</strong>
+                                                <pre>
+                                                    <code class="javascript">//npm run dev
+process.env.NODE_ENV = 'development'
+//npm run build
+process.env.NODE_ENV = 'production'</code>
+                                                </pre>
+                                        </div>
+                                        코드베이스의 호스트 IP를 별도의 환경 변수 설정 파일로 분리했습니다.
+                                        <img class="career_tech_img" src="./env파일설정.png" alt="">
+                                        <p class="small">👆 코드베이스에 IP가 들어가지 않게 env파일을 만들어서 변수를 호출해서 사용하도록 했습니다.</p>
+                                        <div class="article_section">
+                                            커밋 코드
+                                            <img class="career_tech_img" src="./개발환경설정커밋이미지.png" alt="">
+                                            <p class="small">👆 제가 수정 후, 커밋 전에 찍은 스샷입니다.</p>
+                                            <p class="small">(사용자 로그인이 필요한 제품이 아니여서 로그인을 하면, 브라우저 localstorage에만 저장되는 걸로 로그인 기능을 실행합니다.)</p>
+                                        </div>
+                                        <div class="article_section">
+                                            <h5>팀 내 공유 문서</h5>
+                                            <p><a href="./개발 모드와 빌드 모드 구분으로 ems 호스트 정보 자동 설정 방법.pdf" target="_blank">📄 개발 모드와 빌드 모드 구분으로 ems 호스트 정보 자동 설정 방법.pdf</a></p>
+                                            <p><a href="./Vue-CLI 환경변수 설정으로 코드 베이스에서 IP 분리하기.pdf" target="_blank">📄 Vue-CLI 환경변수 설정으로 코드 베이스에서 IP 분리하기</a></p>
+                                        </div>
+                                    </article>
+                                    
+                                    <li class="article_title no_drag" >사용성 개선 - 모션 효과 추가</li>
+                                        <article>
+                                            <div class="article_section">
+                                                <h5>작업 이유</h5>
+                                                <ul>
+                                                    <li class="black">사용자가 제품 사용에 집중하도록 요소에 모션을 추가하는 작업을 했습니다.</li>
+                                                    <li class="black">제품에 transition같은 컴포넌트의 표시에 모션이 들어간 요소가 없었습니다. </li>
+                                                </ul>
+                                            </div>
+                                            <div class="article_section">
+                                                <h5>모션 효과 구현에 사용한 기술</h5>       
+                                                <ul>
+                                                    <li class="black"><a href="https://vuetifyjs.com/en/getting-started/installation/" target="_blank">Vuetify의 UI Component</a></li>
+                                                    <li class="black"><a href="https://kr.vuejs.org/v2/guide/transitions.html" target="_blank">Vue의 진입/진출 transition</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="article_section">
+                                                👇 제품에서 버튼을 누르면 하위로 리스트가 펼쳐지는 것이 모션으로 동작하도록 Vuetify의 &lt;v-expansion-panels &gt;를 사용했습니다.
+                                                <img class="career_tech_img" src="./vuetify-v-expansion-panel적용.png" alt="">
+                                            </div>
+                                        </article>
+                                    <li class="article_title no_drag" >사용성 개선 - 로딩 효과 추가</li>
+                                        <article>
+                                            <div class="article_section">
+                                                <h5>작업 이유</h5>
+                                                <ul>
+                                                    <li class="black">데이터가 렌더링이 되기 전에 빈 요소로 요소가 방치되어 있었습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="article_section">
+                                                <h5>기능 구현에 사용한 기술</h5>
+                                                <ul>
+                                                    <li>vue-skeleton-loading 패키지</li>
+                                                    <li>Vuetify</li>
+                                                </ul>
+                                            </div>
+                                            <div class="article_section">
+                                                <p>AS-IS: 웹 페이지에 데이터가 로딩되기 까지 빈 화면이나 'no data'라는 문구로만 요소에 보여주었습니다.</p>
+                                                <p>TO-BE: vue-skeleton-loading 패키지를 사용해서 빈 화면이나 데이터가 없다는 문구를 대신해서 로딩되고 있다는 효과를 사용자에게 전달해서 사용성을 개선했습니다.</p>
+                                                <p>팀장님께 제안한 설계문서</p>
+                                                - 여기에 왜 vue-skeleton-loading 패키지를 사용했고, 프로토타입 작성 예시도 작성하기
+                                                <p>merge 확인</p>
+                                                <p>comment</p>
+                                            </div>
+                                            
+                                        
+                                        </article>
+                                    <li class="article_title no_drag">사용성 개선 - text-overflow 및 list-overflow 대응.</li>
+                                    <article>
+                                        <div class="article_section">
+                                            <h5>작업 이유</h5>
+                                            <ul>
+                                                <li class="black">기존 방식인 javascript 함수를 사용해서 서버에서 받아온 문자열 데이터를 slice로 자르고, '...' 문자열을 붙이는 Javascript 함수를 만들어서 사용하고 있었습니다.
+                                                    이 방법이 안 좋은 방법이라고 생각했습니다. 
+                                                    <p>
+                                                        그 이유는
+                                                        몇 번째 문자까지 보여줄지 직접 숫자를 정해줘야 했기 때문이었습니다. 어떻게 개발자가 텍스트를 둘러싸는 요소의 너비를 알고 한 번에 몇 글자까지 생략하고 '...'을 표시할 지 알겠습니까. 
+                                                        몇번쨰 글자까지 생략해야 하는지 웹에서 확인하면서 생략 자릿수를 설정해야 하는 불편함이 있습니다.
+                                                        그리고, 브라우저 크기에 따라서 요소가 변경되면, 바로 화면의 css가 깨져버리는 심각한 문제가 발생할 것이라고 생각했습니다.
+                                                    </p>
+                                                </li>
+                                                <li class="black">아주 일부분만 텍스트 생략 Javascript 함수가 사용되었었습니다. 그래서 그냥 style로 텍스트 생략 설정을 해주는 것이 좋겠다고 생각했습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <pre>
+                                            <code class="css">{
+    text-overflow: "ellipsis";
+    overflow: "hidden";
+    white-space: "nowrap";
+}</code>
+                                        </pre>
+                                        <p>list-overflow</p>
+                                        리스트 헤더까지 목록 스크롤에 포함되었었습니다. 보통은 리스트 헤더 아래에 목록이 있는 body 부분만 스크롤이 작용하는 게 맞다고 생각해서 팀장님에게 허락받고 수정했습니다.
+                                    </article>
+                                    <li class="article_title no_drag">피그마 설계대로 꼼꼼히 구현되지 않은 부분 작업</li>
+                                    <article>
+                                        <ul>
+                                            <li class="black">font, 텍스트 크기 그리고 weight가 설계와 다르게 구현된 경우를 설계대로 수정했습니다.</li>
+                                            <li class="black">요소의 색상, 크기 빠진 기능과 요소를 꼼꼼히 살펴보고 수정 보완했습니다.</li>
+                                        </ul>
+                                    </article>
+                                    <!-- <li class="article_title no_drag">코드 퀄리티 향상 - Jest 테스트 작성</li>
+                                    <article></article> -->
+                                </ul>
                                 <br><br><p class="title3">기능 개발</p>
+                                <ul>
+                                    <!-- <li class="article_title no_drag">NEXT.js를 사용해서 edgemaster 소개 및 docs 페이지 만들기.</li>
+                                    <article>
+                                        <h5>NEXT.js를 사용한 이유</h5>
+                                        <p>제가 담당하는 제품인 edgemaster는 패키지 형태로 기업에 전달됩니다. 웹 서비스가 아니여서 이 제품을 홍보할 방법이 없었습니다.
+                                            이 제품을 알리고 싶었고, 그래서 제가 기획한 생각이 이 제품을 소개하는 페이지와 메뉴얼을 웹 서비스 해보자고 생각하고 기획했습니다.
+                                            개발 기술 선정에서 가장 우선시 되는 원칙이 '알리자!'였기 때문에 검색 엔진 최적화가 필요하다고 생각했습니다. 그래서 NEXT.js를 사용했습니다.
+                                            렌더링이 빠르다는 장점도 있지만, 기술에 대한 호기심도 있었기 때문에 공부해서 구현했습니다.
+                                        </p>
+                                        <h5>설계 방법과 기획안</h5>
+                                        <p></p>
 
+                                        <h5>구현하면서 어려웠던 점</h5>
+                                        <p></p>
+
+                                        <h5>구현 제품 결과물</h5>
+                                        <p></p>
+
+                                        <h5>성과</h5>
+                                        <p></p>
+
+
+                                    </article> -->
+                                    <li class="article_title no_drag">부가 페이지 개발</li>
+                                    <article>
+                                        특정 업체에서 기능 요청으로 개발하게 된 제품입니다. 
+                                        <h5>사용기술</h5>
+                                        <ul class="skill_box">
+                                            <li class="skill_badge">Vue.js</li>
+                                            <li class="skill_badge">Vuetify</li>
+                                        </ul>
+                                        <h5>기능</h5>
+                                    </article>
+                                    <li class="article_title no_drag">베트남 외주 프로덕트 현재 프로젝트에 병합 및 내재화.</li>
+                                    <article>
+                                        <div class="article_section">
+                                            <h5>사용기술</h5>
+                                            <ul class="skill_box">
+                                                <li class="skill_badge">Vue.js</li>
+                                                <li class="skill_badge">Chart.js</li>
+                                                <li class="skill_badge">Hammer.js</li>
+                                                <li class="skill_badge">Vuetify</li>
+                                            </ul>
+                                        </div>
+                                        <div class="article_section"> 
+                                            <h5>기능</h5>
+                                            <ul>
+                                                <li>사용자가 자유롭게 차트의 종류를 선택하고, 크기 및 배치 조작</li>
+                                                <li>막대, 선, 게이지 그리고 텍스트 차트 구현</li>
+                                                <li>그래프 구간을 확대해서 상세 데이터 보기</li>
+                                            </ul>
+                                        </div>
+                                        <div class="article_section">
+                                            <h5>외주 코드에서 배운 점</h5>
+                                            <ul>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </article>
+                                    <li class="article_title no_drag">반응형 기능 구현.</li>
+                                    <article></article>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="experience">
-                        <div>
+                        <div class="company_info">
                             <h3>브랜디<span class="point">.</span></h3>
-                            <p class="position">Web FullStack Engineer<br />2020. 11. 17 - 2021. 01. 04(2M)</p>
-                            <img class="tech_logo" src="./vue.png" alt="">
+                            <p class="position">Web FullStack Engineer<br> 2020. 11. 17 - 2021. 01. 04(2M)</p>
+                            <p class="title3">담당 업무</p>
+                            커머스 개발팀 개발 과제 진행.    
                         </div>
                         <div>
                             <div class="project">
-                                <h4>개발팀 수습 개발 과제<span class="point">.</span></h4>
-                                2020. 11. 17 - 2021. 01. 04(2M)
-                                <p class="title3">Description.</p>
-                                커머스 개발팀 개발 과제 진행.
+                                <h4 class="project_name">프로젝트명 : 개발팀 수습 개발 과제</h4>
+                                <p class="title3">사용 기술</p>
+                                HTML, CSS, Javascript, Vue.js, PHP, MySQL
                                 <p class="title3">What did I do.</p>
                                 과제 수행 및 코드 리뷰.<br />
                                 MySQL 쿼리 작성해서 데이터 추출.
-                                <p class="title3">Tech Stack.</p>
-                                HTML, CSS, Javascript, Vue.js, PHP, MySQL
+                                
                             </div>
                         </div>
                     </div>
                     <div class="experience">
-                        <div>
+                        <div class="company_info">
                             <h3>와이즈넛<span class="point">.</span></h3>
                             <p class="position">
                                 Solution and Web Application Engineer<br />
                                 2019. 04. 22 - 2020. 09. 21(1Y5M)
                             </p>
-                            <img class="tech_logo" src="./spring.png" alt="">
-                            <img class="tech_logo" src="./javascript.png" alt="">
-                            <img class="tech_logo" src="./java.png" alt="">
+                            <p class="title3">담당 업무</p>
+                            공공기관 웹 사이트 검색 솔루션 구축 및 웹 페이지 개발.
                         </div>
-                        <div>
                             <div class="project">
-                                <h4>인천공항 챗봇 프로젝트<span class="point">.</span></h4>
-                                2020. 03 - 2020. 05(3M)
+                                <h4 class="project_name">프로젝트명 : 인천공항 챗봇 기술지원</h4>
+                                <br>2020. 03 - 2020. 05(3M)<br>
+                                
                                 <p class="title3">Description.</p>
                                 챗봇 관리도구 기능 개발.
                                 <p class="title3">What did I do.</p>
@@ -126,8 +342,8 @@
                                 HTML, CSS, Javascript, Java, Spring, SVN
                             </div>
                             <div class="project">
-                                <h4>공공기관 검색 솔루션 구축 및 웹 검색페이지 개발<span class="point">.</span></h4>
-                                2019. 05 - 2020. 09(1Y4M)
+                                <h4 class="project_name">프로젝트명 : 검색 솔루션 구축 및 웹 검색페이지 개발</h4>
+                                <br>2019. 05 - 2020. 09(1Y4M)<br>
                                 <p class="title3">Description.</p>
                                 <ul>
                                     <li><p class="black">쿼리를 만들거나 상주 개발자로부터 검색 데이터를 출력할 수 있는 쿼리를 받아서 검색솔루션이 주기적으로 쿼리를 실행해서 검색솔루션이 검색어를 색인하도록
@@ -142,13 +358,19 @@
                                 <p class="title3">Tech Stack.</p>
                                 HTML, CSS, Javascript, Java, Spring, SVN
                             </div>
-                        </div>
                     </div>
                 </section>
                 <section>
                     <h2>The Big Challenge<span class="point">.</span></h2>
                     <p>프론트엔드 개발자로 일하시면서 문제 해결 및 기술 도입 사례</p>
+                    
                     <div class=“skill”>
+                        <div class=“skill_area”>
+                            <h3 class="challenge_title">베트남 외주 구현 제품, 현재 프로젝트에 병합하기 그리고 배우게 된 것들<span class="point">.</span></h3>
+                            <p class=“black”>
+                                
+                            </p>
+                        </div>
                         <div class=“skill_area”>
                             <h3 class="challenge_title">개발자 2명과 협업하기<span class="point">.</span></h3>
                             <p class=“black”>
@@ -214,6 +436,7 @@
                             <h3>HTML / CSS /SASS<span class="point">.</span></h3>
                             <ul>
                                 <li><p class="black">HTML(5), CSS, Javascript(최소 ES5)를 사용해서 개발 가능합니다.</p></li>
+                                <li><p class="black">CSS만으로 처리할 수 있는 기능을 Javascript로 처리하지 않습니다. CSS를 우선적으로 적용하고, 안 되면, Javascript를 사용합니다.</p></li>
                                 <li><p class="black">CSS transition을 사용해서 Javascript의 표현을 부드럽게 할 수 있습니다.</p></li>
                                 <li><p class="black">CSS에서 가상요소 '::after'와 '::before'를 사용할 수 있습니다.</p></li>
                                 <li><p class="black">SASS CSS preprocessor 설정하고 사용할 수 있습니다.</p></li>
@@ -381,7 +604,7 @@
                 <div class="content_sticky_box">
                     <div class="contact_box">
                         <img src="./copy_icon.png" class="copyEmail">
-                        <input type="text" class="email" value="insookim0702@gmail.com" readonly>
+                        <input type="text" class="email no_drag" value="insookim0702@gmail.com" readonly>
                     </div>
                     <div class="contents">
                         <p class="little_title">Work Experience</p>

@@ -2,6 +2,8 @@ import './css/animation.css';
 import './css/darkMode.css';
 import './css/index.css';
 import './css/title_size.css';
+import './css/modal.css';
+import './css/article.css';
 import './img/dark_allow.png';
 import './img/dark.png';
 import './img/white.png';
@@ -13,6 +15,15 @@ import './img/spring.png';
 import './img/java.png';
 import './img/javascript.png';
 import './img/copy_icon.png';
+import './img/개발환경설정커밋이미지.png';
+import './img/env파일설정.png';
+import './img/vuetify-v-expansion-panel적용.png';
+import './js/article';
+import './attach/개발 모드와 빌드 모드 구분으로 ems 호스트 정보 자동 설정 방법.pdf';
+import './attach/Vue-CLI 환경변수 설정으로 코드 베이스에서 IP 분리하기.pdf';
+import './attach/[FE] Javascript 문서화 방법.pdf';
+import './attach/[FE] Vue.js 라이프 사이클.pdf';
+import './js/article';
 const BODY = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
@@ -24,6 +35,7 @@ const CONTENTS = document.querySelector('.contents_box');
 const SECTION = document.querySelectorAll('section');
 const BUTTON_COPY_EMAIL = document.querySelector('.contact_box');
 const LITTLE_TITLE = document.querySelectorAll('.little_title');
+
 let IS_DARK_MODE = false;
 
 const ALLOW_START_OFFSETY_RATIO = 0.6;
@@ -56,6 +68,7 @@ function calcTotalCareerPeriod() {
 
 function init() {
     calcTotalCareerPeriod();
+
     currentJobPeriod.forEach((aItem) => {
         let period = '';
         if (diffYear > 0) {
