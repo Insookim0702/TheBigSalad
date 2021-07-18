@@ -58,13 +58,6 @@ body.dark .project {
 }
 
 body.dark .contact_box:hover,
-.email:hover {
-    background-color: #ff3478;
-}
-
-body.dark .email:hover {
-    background-color: #ff3478;
-}
 body.dark .point {
     /* font-size: 3rem; */
     background: -webkit-linear-gradient(left, #ff3478, #ff79a6);
@@ -80,4 +73,9 @@ body.dark .point {
 body.dark ::selection {
     background-color: #ff508b;
     color: black;
+}
+
+body.dark .contact_box:hover .email {
+    background-color: #141718;
+    color: #f7f1e3;
 }

@@ -280,7 +280,7 @@ section {
     .project_name {
         position: absolute;
         background-color: rgb(250, 250, 250);
-        top: -1.7rem;
+        top: -1.9rem;
         left: 1rem;
         padding: 0 0.3rem;
     }
@@ -337,14 +337,12 @@ section {
         box-shadow: 1px 2px 5px rgb(161, 161, 161);
         border-radius: 8px;
         border: 1px solid rgb(221, 219, 219);
+        margin-bottom: 20px;
     }
 
-    .contact_box:hover {
-        background-color: #1cf3c8;
-    }
     .contact_box:hover .email {
-        background-color: #1cf3c8;
         transform: scale(1.1);
+        background-color: white;
     }
 
     /* .email:hover {
@@ -361,6 +359,7 @@ section {
         -ms-user-select: none;
         user-select: none;
     }
+
     .email:focus {
         outline: none;
     }
@@ -383,6 +382,7 @@ section {
 .copyEmail {
     width: 1.4em;
 }
+
 @media (min-width: 1551px) {
     .side_content {
         right: 12vw;

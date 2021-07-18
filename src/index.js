@@ -1,29 +1,6 @@
-import './css/animation.css';
-import './css/darkMode.css';
-import './css/index.css';
-import './css/title_size.css';
-import './css/modal.css';
-import './css/article.css';
-import './img/dark_allow.png';
-import './img/dark.png';
-import './img/white.png';
-import './img/white_allow.png';
-import './img/github.png';
-import './img/vue.png';
-import './img/gitlab.png';
-import './img/spring.png';
-import './img/java.png';
-import './img/javascript.png';
-import './img/copy_icon.png';
-import './img/개발환경설정커밋이미지.png';
-import './img/env파일설정.png';
-import './img/vuetify-v-expansion-panel적용.png';
-import './js/article';
-import './attach/개발 모드와 빌드 모드 구분으로 ems 호스트 정보 자동 설정 방법.pdf';
-import './attach/Vue-CLI 환경변수 설정으로 코드 베이스에서 IP 분리하기.pdf';
-import './attach/[FE] Javascript 문서화 방법.pdf';
-import './attach/[FE] Vue.js 라이프 사이클.pdf';
-import './js/article';
+import './js/css';
+import './js/pdf';
+import './js/img';
 const BODY = document.body;
 const currentJobPeriod = document.querySelectorAll('.currentJobPeriod');
 const totalCareer = document.querySelector('.totalCareer');
@@ -50,9 +27,9 @@ const SECTION1_START_Y_PX = SECTION[0].clientHeight;
 const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].clientHeight + 200;
 const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight + 200;
 const MY_SALAD_PROJECT = THE_BIG_CHALLENGE + SECTION[3].clientHeight + 100;
-const ALONE_STUDY = MY_SALAD_PROJECT + SECTION[4].clientHeight + 100;
-const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
-const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, MY_SALAD_PROJECT, ALONE_STUDY, WEB_PAGE_TOTAL_HEIGHT];
+// const ALONE_STUDY = MY_SALAD_PROJECT + SECTION[4].clientHeight + 100;
+// const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
+const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, MY_SALAD_PROJECT, WEB_PAGE_TOTAL_HEIGHT];
 const currentDate = new Date();
 const wisenutPeriod = 17;
 const brandiPeriod = 2;
@@ -199,12 +176,13 @@ function scrollReactContents() {
             contentStyle(3);
             // Alone Study
         }
-        if (ALONE_STUDY < pageYOffset) {
-            contentStyle(4);
-            // Skill
-        }
-        if (WEB_PAGE_TOTAL_HEIGHT - 200 < pageYOffset) {
-            contentStyle(5);
+        // if (ALONE_STUDY < pageYOffset) {
+        //     contentStyle(4);
+        //     // Skill
+        // }
+        if (WEB_PAGE_TOTAL_HEIGHT - 500 < pageYOffset) {
+            contentStyle(3);
+            // contentStyle(4);
             // Contact
         }
     }
@@ -214,7 +192,7 @@ function contentStyle(idx) {
     LITTLE_TITLE.forEach((element, index) => {
         if (index === idx) {
             if (IS_DARK_MODE === false) {
-                element.style.color = '#222';
+                element.style.color = 'black';
             } else {
                 element.style.color = '#f7f1e3';
             }

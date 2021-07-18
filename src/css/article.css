@@ -33,12 +33,12 @@ pre {
 }
 
 .article_section {
-    padding-top: 2rem;
+    padding-top: 4rem;
 }
 
 h5 {
     margin: 0;
-    padding: 0.7rem 0;
+    padding: 0 0;
 }
 
 .skill_box {
@@ -59,4 +59,41 @@ h5 {
     color: black;
     border-radius: 4px;
     box-shadow: 1px 1px 4px rgb(175, 185, 182);
+}
+.article_img_box {
+    display: flex;
+    justify-content: center;
+}
+
+.grid_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.grid_item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 23vw;
+    height: 15vw;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+.grid_item:hover::after {
+    position: absolute;
+    background-color: black;
+    color: aquamarine;
+    content: attr(datadescr);
+    width: 100%;
+    text-align: center;
+}
+
+.filter_img {
+    width: 23vw;
+}
+
+.filter_img:hover {
+    transform: scale(1.1);
 }
