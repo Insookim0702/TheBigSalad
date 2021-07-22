@@ -2,22 +2,33 @@ article {
     display: none;
     padding-top: 1rem;
     padding-bottom: 7rem;
+    border-radius: 5px;
 }
 .article_title {
+    list-style: none;
     font-size: 1.4rem;
     cursor: pointer;
+    color: black;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 27, 55, 0.1);
 }
 
 .article_title:hover {
-    transform: scale(1.02);
+    background-color: rgb(241, 241, 241);
 }
 
+.article_list {
+    padding: 0;
+}
+.article_state {
+    margin-right: 20px;
+}
 pre {
     margin: 0;
 }
 
 .career_tech_img {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     width: 100%;
     cursor: zoom-in;
 }
@@ -48,7 +59,6 @@ h5 {
     display: flex;
     padding: 5px;
     background-color: rgb(241, 241, 241);
-    justify-content: flex-start;
     gap: 0.5rem;
 }
 
@@ -75,23 +85,29 @@ h5 {
     position: relative;
     display: flex;
     align-items: flex-end;
-    width: 23vw;
-    height: 15vw;
+    /* width: 23vw; */
+    max-height: 180px;
     overflow: hidden;
     border: 1px solid gray;
 }
 
-.grid_item:hover::after {
+.grid_item::after {
+    display: none;
     position: absolute;
     background-color: black;
     color: aquamarine;
-    content: attr(datadescr);
-    width: 100%;
+    content: attr(data-content);
     text-align: center;
+    width: 100%;
+    height: 30px;
+}
+
+.grid_item:hover::after {
+    display: block;
 }
 
 .filter_img {
-    width: 23vw;
+    width: 340px;
 }
 
 .filter_img:hover {

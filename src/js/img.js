@@ -15,4 +15,7 @@ import '../img/vuetify-v-expansion-panel적용.png';
 import '../img/커뮤니케이션.png';
 import '../img/버그수정-필터UI.png';
 import '../img/no_reply_count.png';
-import '../img/edgemaster_map.png';
+import '../img/dashboard.png';
+import '../img/chart.png';
+import '../img/register_sensor.png';
+import '../img/sensor_group.png';

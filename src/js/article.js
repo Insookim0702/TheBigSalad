@@ -1,3 +1,4 @@
+const articleStates = document.querySelectorAll('.article_state');
 const articleTitles = document.querySelectorAll('.article_title');
 const articles = document.querySelectorAll('article');
 const MODAL = document.querySelector('.modal');
@@ -25,11 +26,15 @@ function clickArticle() {
     articleTitles.forEach((title, idx) => {
         title.addEventListener('click', () => {
             if (CURRENT_ARTICLE === idx) {
+                articleStates[CURRENT_ARTICLE].innerHTML = '▼';
                 articles[CURRENT_ARTICLE].style.display = 'none';
+                articleTitles[CURRENT_ARTICLE].style.color = 'black';
                 CURRENT_ARTICLE = -1;
             } else {
                 CURRENT_ARTICLE = idx;
+                articleStates[CURRENT_ARTICLE].innerHTML = '△';
                 articles[CURRENT_ARTICLE].style.display = 'block';
+                articleTitles[CURRENT_ARTICLE].style.color = '#00b894';
             }
         });
     });
