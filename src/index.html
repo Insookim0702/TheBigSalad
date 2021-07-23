@@ -172,7 +172,7 @@
                                     외주 제품 코드를 계속 읽고, 배울 부분을 문서로 정리해서 팀에 공유했습니다.
                                     <ul >
                                         <!-- <li><p class="black">chart.js를 사용한 차트 개발</p></li> -->
-                                        <p class="black"></p>📄 <a href="https://pinokio0702.tistory.com/375">[Vue]전역 alert와 confirm 컴포넌트 개발 적용기</a></p>
+                                        <p class="black"></p>📄 <a href="https://pinokio0702.tistory.com/375">[Vue] webpack의 모듈 시스템을 사용한 alert와 confirm 개발하기</a></p>
                                         <p class="black">📄 <a href="https://pinokio0702.tistory.com/370">[Javascript] export와 export default의 차이점</a></p>
                                         <p class="black">📄 <a href="https://pinokio0702.tistory.com/373">[Axios] axios-instance 생성하고, api 요청 함수 작성하는 방법</a></p>
                                         <p class="black">📄 <a href="https://pinokio0702.tistory.com/371">[Vue] app.vue 코드 뭉치 분리하기</a></p>
@@ -251,16 +251,66 @@
                                 아래의 개선 목록들은 제품이 더 좋은 제품이 될 수 있도록 제가 스스로 해야겠다고 생각해서 개선한 내용입니다.
                                 <br><br>
                                 <ul class="article_list">
-                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>코드 퀄리티 향상 - Vue-CLI 기본 스펙을 사용한 개발 환경 자동 세팅</span></li>
+                                    <li class="article_title no_drag">
+                                        <span class="article_state">▼</span><span>코드 개선 - app.vue 뭉친 코드 분리</span></li>
+                                    <article>
+                                        <a href="https://pinokio0702.tistory.com/371" target="_blank">🔗 개발 코드로 학습-1 app.vue 코드 뭉치 분리하기</a>
+                                        <img class="career_tech_img" src="./commit_1.png" alt="">
+                                    </article>
+                                    <li class="article_title no_drag">
+                                        <span class="article_state">▼</span><span>코드 개선 - 긴 코드 분리하기</span></li>
+                                    <article>
+                                        client와 server에 사용자가 입력한 sensor를 등록하는 기능의 함수인데, 너무 길어서 기능을 찾고 유지보수하기 힘든 코드였습니다.
+                                        <div class="article_section">
+                                            <h5>개선 이유</h5>
+                                            <p>함수 하나가 172줄이나 되서 가독성이 떨이지고, depth가 깊음. 함수 안에서 조건 별로 처리되는 기능이 달라서 기능을 찾기가 어려움. → 유지보수가 힘듬.</p>
+                                            <img style="margin: 0 46%; width: 50px;" src="./긴코드.png" alt="">
+                                            <p class="small">👆 함수 한 개.</p>
+                                        </div>
+                                        <div class="article_section">
+                                            <h5>개선 방법</h5>
+                                            <p>1함수 1기능으로 분리했습니다.</p>
+                                            save를 누르면 실행되는 함수가 짧고, depth가 없어서 개발자가 딱 봤을 때, 고칠만한 코드로 보이고, 읽기가 쉬워짐. 함수가 딱 실행하는 기능만 갖춰지게 됨.
+                                            <pre>
+                                                <code class="javascript">
+addEdge() {  // 👈 분리된 함수
+    //...
+},
+editEdge() { // 👈 분리된 함수
+    //...
+},
+editTaglet() { // 👈 분리된 함수
+    //...
+},
+async handleClickSaveDeviceInfo() {
+    if (this.sIsMatch === 'N') {
+      this.$alert.error('Check DB password.');
+      return;
+    }
+    if (this.gDeviceEditMode === 'addedge') {
+      this.addEdge();
+    } else if (this.gDeviceEditMode === 'editedge') {
+      this.editEdge();
+    } else if (this.gDeviceEditMode === 'edittaglet') {
+      this.editTaglet();
+    }
+},
+                                                </code>
+                                            </pre>
+
+                                        </div>
+                                        <img class="career_tech_img" src="./commit_1.png" alt="">
+                                    </article>
+                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>코드 개선 - Vue-CLI 기본 스펙을 사용한 개발 환경 자동 세팅</span></li>
                                     <article>
                                             Vue-cli 빌드 환경 설정 기능을 사용해서 개발 생산성을 높이는데 기여했습니다.
-                                            <p>'development'일 때, 로그인에 필요한 데이터를 브라우저에 자동으로 입력되게 했고, host도 개발환경일 때 ip가 설정되도록 해서 더 편한 개발환경을 만들었습니다.</p>
+                                            
                                             <ul>
                                                 <li class="black">개발환경일 때 로그인 자동화</li>
                                                 <li class="black">개발환경일 때 호스트 설정 자동화</li>
                                             </ul>    
                                         <div class="article_section">
-                                            <h5>문제</h5>
+                                            <h5>문제 인식</h5>
                                             <ol>
                                                 <li class="black">개발환경인데, 매번 코드를 작성하고 개발 페이지를 확인할 때에 로그인을 해야했습니다.</li>
                                                 <li class="black">master branch에서 새로 분기한 branch에서는 매 번, 서버 host를 코드 베이스에서 직접 변경해 주어야하는 불편함이 문제라고 인식했습니다.</li> 
@@ -270,7 +320,7 @@
                                         <div class="article_section">
                                             <h5>해결 방법</h5>
                                             <p>
-                                                <strong>Vue-CLI의 기본 명령어 실행에 따라서 환경변수가 설정되는 스펙 사용.</strong>
+                                                Vue-CLI의 기본 명령어 실행에 따라서 환경변수가 설정되는 스펙 사용. <a href="https://cli.vuejs.org/guide/mode-and-env.html#modes" target="_blank">참고 문서</a>
                                                 <pre>
                                                     <code class="javascript">//npm run dev
 process.env.NODE_ENV = 'development'
@@ -294,7 +344,7 @@ process.env.NODE_ENV = 'production'</code>
                                         </div>
                                     </article>
                                     
-                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>사용성 개선 - 모션 효과 추가.</span></li>
+                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>UX 개선 - 모션 효과 추가.</span></li>
                                         <article>
                                             <div class="article_section">
                                                 <h5>작업 이유</h5>
@@ -341,39 +391,126 @@ process.env.NODE_ENV = 'production'</code>
                                             
                                         
                                         </article> -->
-                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>사용성 개선 - text-overflow 및 list-overflow 대응.</span></li>
+                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>UX 개선 - text-overflow 및 list-overflow 대응.</span></li>
                                     <article>
                                         <div class="article_section">
-                                            <h5>작업 이유</h5>
+                                            <div>
+                                                <h5>작업 이유</h5>
+                                                <p>text-overflow</p>
+                                                <ul>
+                                                    <li class="black">CSS로 쉽게 처리할 수 있습니다.</li>
+                                                    <li class="black">
+                                                            기존 방식인 javascript 함수를 사용해서 서버에서 받아온 문자열 데이터를 slice로 자르고, '...' 문자열을 붙이는 Javascript 함수를 만들어서 사용하고 있었습니다.
+                                                        이 방법이 안 좋은 방법이라고 생각했습니다. 
+                                                            몇 번째 문자까지 보여줄지 직접 숫자를 정해줘야 했기 때문이었습니다. 어떻게 개발자가 텍스트를 둘러싸는 요소의 너비를 알고 한 번에 몇 글자까지 생략하고 '...'을 표시할 지 알겠습니까. 
+                                                            몇 번째 글자까지 생략해야 하는지 웹에서 확인하면서 생략 자릿수를 설정해야 하는 불편함이 있습니다.
+                                                            그리고, 브라우저 크기에 따라서 요소가 변경되면, 바로 화면의 css가 깨져버리는 심각한 문제가 발생할 것이라고 생각했습니다.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <p>list-overflow</p>
                                             <ul>
-                                                <li class="black">기존 방식인 javascript 함수를 사용해서 서버에서 받아온 문자열 데이터를 slice로 자르고, '...' 문자열을 붙이는 Javascript 함수를 만들어서 사용하고 있었습니다.
-                                                    이 방법이 안 좋은 방법이라고 생각했습니다. 
-                                                    <p>
-                                                        그 이유는
-                                                        몇 번째 문자까지 보여줄지 직접 숫자를 정해줘야 했기 때문이었습니다. 어떻게 개발자가 텍스트를 둘러싸는 요소의 너비를 알고 한 번에 몇 글자까지 생략하고 '...'을 표시할 지 알겠습니까. 
-                                                        몇번쨰 글자까지 생략해야 하는지 웹에서 확인하면서 생략 자릿수를 설정해야 하는 불편함이 있습니다.
-                                                        그리고, 브라우저 크기에 따라서 요소가 변경되면, 바로 화면의 css가 깨져버리는 심각한 문제가 발생할 것이라고 생각했습니다.
-                                                    </p>
-                                                </li>
-                                                <li class="black">아주 일부분만 텍스트 생략 Javascript 함수가 사용되었었습니다. 그래서 그냥 style로 텍스트 생략 설정을 해주는 것이 좋겠다고 생각했습니다.</li>
+                                                <li class="black">리스트 헤더까지 목록 스크롤에 포함되어 있었습니다. 보통은 리스트 헤더 아래에 목록이 있는 body 부분만 스크롤이 작용하는 게 맞다고 생각해서 팀장님에게 허락받고 수정했습니다.</li>
                                             </ul>
                                         </div>
-                                        <pre>
-                                            <code class="css">{
+                                        <div  class="article_section">
+                                            <h5>문제 해결 방법</h5> 
+                                            <p>text-overflow</p>   
+                                            <pre>
+                                                <code class="css">{
     text-overflow: "ellipsis";
     overflow: "hidden";
     white-space: "nowrap";
 }</code>
-                                        </pre>
-                                        <p>list-overflow</p>
-                                        리스트 헤더까지 목록 스크롤에 포함되었었습니다. 보통은 리스트 헤더 아래에 목록이 있는 body 부분만 스크롤이 작용하는 게 맞다고 생각해서 팀장님에게 허락받고 수정했습니다.
+                                            </pre>
+                                            <p>list-overflow</p>
+                                            <pre>
+                                                <code class="css">{
+    overflow: "scroll";
+    height: 400px;
+}</code>
+                                            </pre>
+                                        </div>
+                                            
+                                        
+                                        
+
+                                        
                                     </article>
-                                    <li class="article_title no_drag"><span class="article_state">▼</span><span>피그마 설계대로 꼼꼼히 구현되지 않은 부분 작업.</span></li>
+                                    <li class="article_title no_drag">
+                                        <span class="article_state">▼</span><span>UI/UX 개선 - map 페이지</span></li>
                                     <article>
-                                        <ul>
-                                            <li class="black">font, 텍스트 크기 그리고 weight가 설계와 다르게 구현된 경우를 설계대로 수정했습니다.</li>
-                                            <li class="black">요소의 색상, 크기 빠진 기능과 요소를 꼼꼼히 살펴보고 수정 보완했습니다.</li>
-                                        </ul>
+                                        <p>아래 사진에 번호를 매긴 빨간 박스 요소들이 <strong>개선이 필요한 요소들</strong>이었습니다.</p>
+                                        <img class="career_tech_img" src="./asis_map.png" alt="">
+                                        <p class="small"></p>
+                                        <div class="article_section">
+                                            <h5>UI 개선 이유</h5>
+                                            <p class="numbering">1️⃣  select box입니다. <strong>전혀 사용자가 보기에는 select box가 아니라고 생각되는 UI였습니다.</strong> 그래서 select box인 것을 표시하기 위해서 Vuetify의 selectbox로 교체했습니다.</p>
+                                            <p class="numbering">2️⃣  하드코딩 되어있는 요소였습니다. <strong>사용자가 알 필요 없는 정보였습니다.</strong></p>
+                                            <p class="numbering">3️⃣  사용자 입장에서 <strong>버튼을 눌러서 원하는 그룹을 필터해서 보고 싶어하지, 직접 검색하는 경우는 드뭅니다.</strong> 그런 목적의 기능이기 때문에 group 필더를 더 사용성이 좋게 개선했습니다. 버튼 영역을 넓히고, 모션을 주어서 펼쳐지도록 수정했습니다. 원래는 그룹을 선택하면, 선택한 그룹 중 가장 앞에 있는 그룹 이름만 보여줬습니다. 본부장님께 UI를 개선해서 보여드렸더니, group button에 선택한 그룹들이 모두 표시가 되었으면 좋겠다고 하는 의견을 제안하셨고, 저는 수용해서 그에 맞게 개선했습니다.</p>
+                                            <p class="numbering">4️⃣  목록을 누르면 카드가 모션없이 띡 등장했습니다. <strong>모션이 있으면, 사용자가 집중하기 좋을 거라 생각했습니다.</strong></p>
+                                            <p class="numbering">5️⃣  <strong>정해진 max-height 없이 목록에 있는 아이템이 전부 출력되었습니다.</strong>
+                                                overflow에 대한 작업이 전혀 되어있지 않아서 사용자의 사용성을 크게 저해한다고 생각했습니다. max-height를 주고, max-height를 넘어갈 정도로 아이템이 많을 경우에는 overflow scroll을 적용했습니다.
+                                                그리고, 리스트를 펼치는 버튼이 누르면 리스트가 펼쳐지지만, 다시 버튼을 눌렀을 때, 닫히지 않았습니다. 사용자에게 불편함을 줄 수 있어서, toggle로 open/close를 구현했습니다.
+                                            </p>
+                                        </div>
+                                        <div class="article_section">
+                                            <h5>UI 개선 결과</h5>
+                                            <img class="career_tech_img" src="./tobe_map.png" alt="">
+                                        </div>
+                                        <div class="article_section">
+                                            <h5>개선 방법</h5>
+                                            <p>1️⃣ : 스타일 변경</p>
+                                            <p>2️⃣ : 단순 코드 삭제</p>
+                                            <p>3️⃣ : 필터 기능 구현</p>
+                                            <p>4️⃣ : transition 진입 진출 태그를 사용</p>
+                                            
+                                            <pre>
+                                                <code style="overflow: scroll;">
+&lt;template&gt;
+&lt;transition name="fade" mode="out-in"&gt;
+    &lt;div class="MapUnit_float" v-if="cIsClicked && gClickedEdgeId === pClickedEdgeInfo.id"&gt;
+        &lt;template v-if="cUnitType === 'edge'"&gt;
+            &lt;EdgeCard :pIsMapUnitEdgeCard="true" :pCardSize="120" :pInfo="pClickedEdgeInfo" :pLocationId="pInfo.location_id" @eInitStatus="eInitStatus" /&gt;
+        &lt;/template&gt;
+
+        &lt;template v-else-if="cUnitType === 'tag'"&gt;
+            &lt;TagInfo :pClickedTagInfo="pClickedTagInfo" :pLocationId="pInfo.location_id" :pIsPinned="true" :pIsMapUnitEdgeCard="true" @eInitStatus="eInitStatus" /&gt;
+        &lt;/template&gt;
+    &lt;/div>
+&lt;/transition>
+&lt;/template&gt;                                                    
+&lt;style&gt;
+    .fade-enter-active {
+        transition: all 0.3s;
+    }
+    .fade-leave-active {
+        transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+    }
+    .fade-enter, .fade-leave-to
+    /* .slide-fade-leave-active below version 2.1.8 */ {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    .tag-fade-enter-active {
+        transition: all 0.3s;
+    }
+    .tag-fade-enter, .tag-fade-leave-to
+    /* .slide-fade-leave-active below version 2.1.8 */ {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    .tag-fade-leave-active {
+        transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+    }
+&lt;/style &gt;    
+                                                </code>
+                                            </pre>
+                                        <p>5️⃣ : 요소에 height와 overflow:scroll을 설정</p>
+                                        </div>
+                                            
+                                                
                                     </article>
                                     <!-- <li class="article_title no_drag"><span class="article_state">▼</span><span>코드 퀄리티 향상 - Jest 테스트 작성</li>
                                     <article></article> -->
@@ -390,7 +527,7 @@ process.env.NODE_ENV = 'production'</code>
                                     <ul class="article_list">
                                         <li class="article_title no_drag"><span class="article_state">▼</span><span>필터 목록 페이지 기능 버그 문제 해결.</span></li>
                                         <article>
-                                            <div class="article_img_box">
+                                            <!-- <div class="article_img_box">
                                                 <img class="career_tech_img filter_img" src="./버그수정-필터UI.png" alt="">
                                             </div>
                                             <p class="small">👆 서버에 등록된 센서 리스트와 리스트를 필터할 수 있는 feature</p>
@@ -407,7 +544,8 @@ process.env.NODE_ENV = 'production'</code>
                                                 부모 컴포넌트에서부터 page의 개수를 page 컴포넌트로 전달하지 않고 있었습니다.
                                             </div>
                                             <div class="article_section"><h5>문제_1 방법</h5></div>
-                                            <div class="article_section"><h5></h5></div>
+                                            <div class="article_section"><h5></h5></div> -->
+                                            <a href="https://dune-prose-2f0.notion.site/d3affdbc769c4c72b93f4cbb0b61b414" target="_blank">필터 목록 버그 수정 문서</a>
                                         </article>
                                     </ul>
                                 </div>
@@ -580,6 +718,12 @@ process.env.NODE_ENV = 'production'</code>
                         <!-- <div class=“skill_area”>
                             <h3 class="challenge_title">베트남 외주 구현 제품, 현재 프로젝트에 병합하기 그리고 배우게 된 것들<span class="point">.</span></h3>
                         </div> -->
+                        <div class=“skill_area”>
+                            <h3 class="challenge_title">팀 코드 컨벤션 팀원들과 의사 결정하기<span class="point">.</span></h3>
+                            <img class="career_tech_img" src="./코드리뷰소집.png" alt="">
+                            <img class="career_tech_img" src="./코드컨벤션.png" alt="">
+                            <img class="career_tech_img" src="./코드컨벤션2.png" alt="">
+                        </div>
                         <div class=“skill_area”>
                             <h3 class="challenge_title">개발자 2명과 협업하기<span class="point">.</span></h3>
                             <p class=“black”>
