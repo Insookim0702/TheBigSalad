@@ -1,7 +1,7 @@
-import '../img/dark_allow.png';
+import '../img/dark_arrow.png';
 import '../img/dark.png';
 import '../img/white.png';
-import '../img/white_allow.png';
+import '../img/white_arrow.png';
 import '../img/github.png';
 import '../img/vue.png';
 import '../img/gitlab.png';
