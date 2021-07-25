@@ -1,4 +1,5 @@
 const OPEN_PROJECTS = document.querySelectorAll('.open_project');
+const COMPANY_INFO = document.querySelectorAll('.company_info');
 const PROJECTS = document.querySelectorAll('.projects');
 const PROJECT_OPEN_STATE = document.querySelectorAll('.project_open_state');
 const PROJECT_TEXT = document.querySelectorAll('.project_text');
@@ -11,6 +12,11 @@ function closeProject() {
         PROJECT_OPEN_STATE[CURRENT_OPEN_COMPONY_PROJECT].innerHTML = '▼';
         PROJECTS[CURRENT_OPEN_COMPONY_PROJECT].style.display = 'none';
         PROJECT_TEXT[CURRENT_OPEN_COMPONY_PROJECT].innerHTML = OPEN_TEXT[CURRENT_OPEN_COMPONY_PROJECT];
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: COMPANY_INFO[CURRENT_OPEN_COMPONY_PROJECT].offsetTop,
+        });
         CURRENT_OPEN_COMPONY_PROJECT = -1;
     }
 }
@@ -18,6 +24,7 @@ function closeProject() {
 function openProject(idx) {
     CURRENT_OPEN_COMPONY_PROJECT = idx;
     PROJECT_OPEN_STATE[CURRENT_OPEN_COMPONY_PROJECT].innerHTML = '△';
+
     PROJECT_TEXT[CURRENT_OPEN_COMPONY_PROJECT].innerHTML = CLOSE_TEXT[CURRENT_OPEN_COMPONY_PROJECT];
     PROJECTS[CURRENT_OPEN_COMPONY_PROJECT].style.display = 'block';
 }
