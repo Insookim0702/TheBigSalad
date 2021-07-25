@@ -66,18 +66,18 @@ h2 {
     line-height: 2;
     line-height: 0.7;
     width: 100%;
-    margin: 0;
+    margin: 15px 0;
 }
 
 h3 {
-    font-size: 1.55rem;
+    font-size: 1.7rem;
     padding: 0;
     margin: 0;
     padding-top: 60px;
 }
 
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 1rem 0;
     margin: 0;
     /* margin: 50px 0px 0px 0px; */
@@ -85,7 +85,7 @@ h4 {
 }
 
 h5 {
-    padding: 1rem 0;
+    padding: 1.1rem;
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
@@ -254,94 +254,7 @@ section {
     padding: 0 0.3rem;
 }
 
-@media (min-width: 700px) {
-    body {
-        font-size: 1.3rem;
-        font-weight: 300;
-    }
-
-    h1 {
-        font-size: 5rem;
-        line-height: 1.1;
-        font-family: Spoqa Han Sans, sans-serif;
-        margin: 0;
-    }
-
-    h2 {
-        font-size: 3.5rem;
-        padding-bottom: 0.5em;
-        margin: 0;
-    }
-
-    .challenge_title {
-        padding-top: 1.5em;
-    }
-
-    h3 {
-        font-size: 2.5rem;
-        padding: 0;
-        margin: 0;
-    }
-
-    h4 {
-        font-size: 2rem;
-        margin: 0;
-        /* font-weight: 400; */
-    }
-
-    .container {
-        margin: auto;
-        width: 100%;
-        max-width: 50rem;
-    }
-
-    .short_discription {
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 1.4;
-    }
-
-    .name_intro {
-        font-size: 4vw;
-        margin-top: -10vh;
-        width: 100%;
-        line-height: 1.3;
-        font-family: Spoqa Han Sans, sans-serif;
-    }
-
-    .experience {
-        border-bottom: 1px solid #eee;
-        /* display: grid;
-        grid-template-columns: 4fr 6fr; */
-        padding: 50px 0px 20px 0px;
-    }
-
-    .company_info {
-        padding-bottom: 3rem;
-    }
-
-    .date {
-        font-size: 1.2rem;
-    }
-
-    .position {
-        font-size: 1.5rem;
-        margin: 1rem 0px 1rem 0px;
-        line-height: 1.2;
-    }
-
-    .skill_area {
-        border-bottom: 1px solid #eee;
-        padding: 50px 0px 50px 0px;
-    }
-}
-
-@media (min-width: 1170px) {
-    .dark_button_box {
-        right: 17vw;
-    }
-}
-
+/* 🖥 가장 큰 화면 */
 @media (min-width: 1300px) {
     .grid-box {
         display: grid;
@@ -418,8 +331,11 @@ section {
     }
 }
 
-.copyEmail {
-    width: 1.4em;
+/* 💻 노트북 화면 */
+@media (min-width: 1170px) {
+    .dark_button_box {
+        right: 17vw;
+    }
 }
 
 @media (min-width: 1551px) {
@@ -434,4 +350,91 @@ section {
     .dark_arrow {
         right: 22vw;
     }
+}
+
+/* 📱 스마트폰 화면 */
+@media (min-width: 700px) {
+    body {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 1.1;
+        font-family: Spoqa Han Sans, sans-serif;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        padding-bottom: 0.5em;
+        margin: 0;
+    }
+
+    .challenge_title {
+        padding-top: 1.5em;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+        margin: 0;
+        /* font-weight: 400; */
+    }
+
+    .container {
+        margin: auto;
+        width: 100%;
+        max-width: 50rem;
+    }
+
+    .short_discription {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    .name_intro {
+        font-size: 4vw;
+        margin-top: -10vh;
+        width: 100%;
+        line-height: 1.3;
+        font-family: Spoqa Han Sans, sans-serif;
+    }
+
+    .experience {
+        border-bottom: 1px solid #eee;
+        /* display: grid;
+        grid-template-columns: 4fr 6fr; */
+        padding: 50px 0px 20px 0px;
+    }
+
+    .company_info {
+        padding-bottom: 3rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+    }
+
+    .position {
+        font-size: 1.5rem;
+        margin: 1rem 0px 1rem 0px;
+        line-height: 1.2;
+    }
+
+    .skill_area {
+        border-bottom: 1px solid #eee;
+        padding: 50px 0px 50px 0px;
+    }
+}
+
+.copyEmail {
+    width: 1.4em;
 }

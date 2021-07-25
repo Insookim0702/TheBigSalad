@@ -12,12 +12,12 @@ const INNER_HEIGHT = window.innerHeight;
 const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
 
 const SECTION1_START_Y_PX = SECTION[0].clientHeight;
-const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].clientHeight + 200;
-const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight + 200;
-const MY_SALAD_PROJECT = THE_BIG_CHALLENGE + SECTION[3].clientHeight + 100;
-// const ALONE_STUDY = MY_SALAD_PROJECT + SECTION[4].clientHeight + 100;
+const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].clientHeight;
+const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight;
+const SKILLS = THE_BIG_CHALLENGE + SECTION[3].clientHeight;
+// const ALONE_STUDY = SKILLS + SECTION[4].clientHeight + 100;
 // const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
-const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, MY_SALAD_PROJECT, WEB_PAGE_TOTAL_HEIGHT];
+const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, SKILLS, WEB_PAGE_TOTAL_HEIGHT];
 
 const ARROW_START_OFFSETY_RATIO = 0.6;
 const ARROW_END_OFFSETY_RATIO = 0.7;
@@ -49,7 +49,7 @@ function scrollReactContents() {
             contentStyle(2);
             // My Salad Project
         }
-        if (MY_SALAD_PROJECT < pageYOffset) {
+        if (SKILLS < pageYOffset) {
             contentStyle(3);
             // Alone Study
         }
