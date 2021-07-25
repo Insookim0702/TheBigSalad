@@ -15,7 +15,8 @@
 
 .modal_img {
     background-color: red;
-    width: 70vw;
+    width: 80vw;
+    max-width: 650px;
     opacity: 100%;
     z-index: 6;
 }

@@ -72,6 +72,7 @@ h5 {
     box-shadow: 1px 1px 4px rgb(175, 185, 182);
 }
 .article_img_box {
+    margin: 20px 0;
     display: flex;
     justify-content: center;
 }

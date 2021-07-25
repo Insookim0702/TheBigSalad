@@ -1,0 +1,17 @@
+.projects {
+    display: none;
+}
+
+.project_open_state {
+    margin-right: 10px;
+}
+
+.open_project {
+    position: sticky;
+    z-index: 1;
+    top: 15px;
+    background-color: aquamarine;
+    color: black;
+    cursor: pointer;
+    padding: 0 10px;
+}
