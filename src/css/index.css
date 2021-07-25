@@ -70,7 +70,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     padding: 0;
     margin: 0;
     padding-top: 60px;
@@ -256,6 +256,9 @@ section {
 
 /* 🖥 가장 큰 화면 */
 @media (min-width: 1300px) {
+    h3 {
+        font-size: 1rem;
+    }
     .grid-box {
         display: grid;
         grid-template-columns: 8fr 2fr;
@@ -279,8 +282,9 @@ section {
     .contact_box {
         cursor: pointer;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 0.6rem;
         font-size: 1rem;
         left: 20px;
@@ -292,15 +296,19 @@ section {
         margin-bottom: 20px;
     }
 
-    .contact_box:hover .email {
-        transform: scale(1.1);
-        background-color: white;
+    .email:hover {
+        color: #55efc4;
     }
 
-    /* .email:hover {
-    } */
+    .email_box {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
     .email {
-        width: 80%;
+        width: 100%;
         border: none;
         cursor: pointer;
         overflow: visible;
@@ -377,7 +385,7 @@ section {
     }
 
     h3 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 0;
         margin: 0;
     }

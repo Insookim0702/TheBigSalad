@@ -89,7 +89,7 @@ function contentStyle(idx) {
             if (IS_DARK_MODE === false) {
                 element.style.color = 'black';
             } else {
-                element.style.color = '#f7f1e3';
+                element.style.color = 'white';
             }
             element.style.transform = 'scale(1.2)';
             element.style.marginLeft = '11px';
