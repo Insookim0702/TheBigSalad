@@ -25,7 +25,7 @@ body.dark nav {
     height: 10px;
     position: nav;
     top: 0;
-    background: linear-gradient(to right, #b33939, #ffb142);
+    background: linear-gradient(to right, #ff3478, #ff79a6);
 }
 
 body.dark .black {
@@ -33,19 +33,37 @@ body.dark .black {
 }
 
 body.dark a {
-    color: #ffb142;
+    color: #ff71a0;
 }
 
 body.dark li {
-    color: #ffb142;
+    color: #ff71a0;
 }
 
+body.dark .skill_box {
+    border: 2px solid #ff3478;
+}
+
+body.dark .skill_badge {
+    color: white;
+    background-color: #ff3478;
+}
+
+body.dark .project_name {
+    background: #141718;
+}
+
+body.dark .project {
+    border: 2px solid #ff3478;
+}
+
+body.dark .contact_box:hover,
 body.dark .point {
     /* font-size: 3rem; */
-    background: -webkit-linear-gradient(left, #b33939, #ffb142);
-    background: -moz-linear-gradient(right, #b33939, #ffb142);
-    background: -o-linear-gradient(right, #b33939, #ffb142);
-    background: linear-gradient(to right, #b33939, #ffb142);
+    background: -webkit-linear-gradient(left, #ff3478, #ff79a6);
+    background: -moz-linear-gradient(right, #ff3478, #ff79a6);
+    background: -o-linear-gradient(right, #ff3478, #ff79a6);
+    background: linear-gradient(to right, #ff3478, #ff79a6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -53,6 +71,11 @@ body.dark .point {
 }
 
 body.dark ::selection {
-    background-color: #ffb142;
+    background-color: #ff508b;
     color: black;
+}
+
+body.dark .contact_box:hover .email {
+    background-color: #141718;
+    color: #f7f1e3;
 }

@@ -17,12 +17,12 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|jpg|gif)$/i,
+                test: /\.(png|jpg|gif|pdf)$/i,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            publicPath: './docs',
+                            publicPath: './docs/',
                             name: '[name].[ext]?[hash]',
                         },
                     },
