@@ -5,7 +5,7 @@ const WHITE_ARROW = document.querySelector('.white_arrow');
 const DARK_ARROW = document.querySelector('.dark_arrow');
 const CONTENTS = document.querySelector('.contents_box');
 const SECTION = document.querySelectorAll('section');
-const BUTTON_COPY_EMAIL = document.querySelector('.contact_box');
+
 const LITTLE_TITLE = document.querySelectorAll('.little_title');
 
 const INNER_HEIGHT = window.innerHeight;
