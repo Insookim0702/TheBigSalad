@@ -1,11 +1,12 @@
 const BODY = document.body;
 const LITTLE_TITLE = document.querySelectorAll('.little_title');
 const SECTION = document.querySelectorAll('section');
-const SECTION1_START_Y_PX = SECTION[0].clientHeight;
 const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
-const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].clientHeight;
-const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight;
-const SKILLS = THE_BIG_CHALLENGE + SECTION[3].clientHeight + 100;
+
+const SECTION1_START_Y_PX = SECTION[0].scrollHeight;
+const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].scrollHeight;
+const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].scrollHeight + 1100;
+const SKILLS = THE_BIG_CHALLENGE + SECTION[3].scrollHeight;
 const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, SKILLS, WEB_PAGE_TOTAL_HEIGHT];
 
 function init() {

@@ -11,10 +11,10 @@ const LITTLE_TITLE = document.querySelectorAll('.little_title');
 const INNER_HEIGHT = window.innerHeight;
 const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
 
-const SECTION1_START_Y_PX = SECTION[0].clientHeight;
-const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].clientHeight;
-const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].clientHeight;
-const SKILLS = THE_BIG_CHALLENGE + SECTION[3].clientHeight;
+const SECTION1_START_Y_PX = SECTION[0].scrollHeight;
+const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].scrollHeight;
+const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].scrollHeight + 1100;
+const SKILLS = THE_BIG_CHALLENGE + SECTION[3].scrollHeight;
 // const ALONE_STUDY = SKILLS + SECTION[4].clientHeight + 100;
 // const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
 const SECTION_START_Y_PX = [SECTION1_START_Y_PX, WORK_EXPERIENCE, THE_BIG_CHALLENGE, SKILLS, WEB_PAGE_TOTAL_HEIGHT];
@@ -35,31 +35,22 @@ function scrollReactContents() {
             element.style.marginLeft = '0px';
         });
     } else {
-        // CONTENTS.style.position = 'fixed';
-        // CONTENTS.style.top = '100px';
         if (SECTION1_START_Y_PX < pageYOffset) {
             contentStyle(0);
             // Work Experience
         }
         if (WORK_EXPERIENCE < pageYOffset) {
+            console.log('The Big Challenge');
             contentStyle(1);
             // The Big Challenge
         }
         if (THE_BIG_CHALLENGE < pageYOffset) {
+            console.log('SKILLS');
             contentStyle(2);
-            // My Salad Project
+            // SKILLS
         }
-        if (SKILLS < pageYOffset) {
-            contentStyle(3);
-            // Alone Study
-        }
-        // if (ALONE_STUDY < pageYOffset) {
-        //     contentStyle(4);
-        //     // Skill
-        // }
         if (WEB_PAGE_TOTAL_HEIGHT - 500 < pageYOffset) {
             contentStyle(3);
-            // contentStyle(4);
             // Contact
         }
     }
