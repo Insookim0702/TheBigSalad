@@ -13,7 +13,7 @@ const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
 
 const SECTION1_START_Y_PX = SECTION[0].scrollHeight;
 const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].scrollHeight;
-const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].scrollHeight + 700;
+const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].scrollHeight + 1000;
 const SKILLS = THE_BIG_CHALLENGE + SECTION[3].scrollHeight;
 // const ALONE_STUDY = SKILLS + SECTION[4].clientHeight + 100;
 // const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;
@@ -40,12 +40,10 @@ function scrollReactContents() {
             // Work Experience
         }
         if (WORK_EXPERIENCE < pageYOffset) {
-            console.log('The Big Challenge');
             contentStyle(1);
             // The Big Challenge
         }
         if (THE_BIG_CHALLENGE < pageYOffset) {
-            console.log('SKILLS');
             contentStyle(2);
             // SKILLS
         }
