@@ -7,3 +7,4 @@ import './js/ArrowFucScript';
 import './js/WhiteDarkModeScript';
 import './js/SideEventScript';
 import './js/OpenProjectScript';
+import './js/EmailCopyScript';

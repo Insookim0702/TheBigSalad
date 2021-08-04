@@ -5,7 +5,7 @@ const WHITE_ARROW = document.querySelector('.white_arrow');
 const DARK_ARROW = document.querySelector('.dark_arrow');
 const CONTENTS = document.querySelector('.contents_box');
 const SECTION = document.querySelectorAll('section');
-const BUTTON_COPY_EMAIL = document.querySelector('.contact_box');
+
 const LITTLE_TITLE = document.querySelectorAll('.little_title');
 
 const INNER_HEIGHT = window.innerHeight;
@@ -13,7 +13,11 @@ const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;
 
 const SECTION1_START_Y_PX = SECTION[0].scrollHeight;
 const WORK_EXPERIENCE = SECTION1_START_Y_PX + SECTION[1].scrollHeight;
+<<<<<<< HEAD
 const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].scrollHeight + 1000;
+=======
+const THE_BIG_CHALLENGE = WORK_EXPERIENCE + SECTION[2].scrollHeight + 900;
+>>>>>>> 583f59549f08abaad6a7952735272bf27354b28d
 const SKILLS = THE_BIG_CHALLENGE + SECTION[3].scrollHeight;
 // const ALONE_STUDY = SKILLS + SECTION[4].clientHeight + 100;
 // const SKILL = ALONE_STUDY + SECTION[5].clientHeight - 300;

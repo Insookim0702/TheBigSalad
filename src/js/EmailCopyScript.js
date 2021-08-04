@@ -1,5 +1,8 @@
+const BUTTON_COPY_EMAIL = document.querySelector('.contact_box');
+
 function copyEmail() {
     const email = document.querySelector('.email');
+
     email.select();
     const isCopy = document.execCommand('copy');
     if (isCopy === true) {
@@ -14,3 +17,5 @@ function init() {
         copyEmail();
     });
 }
+
+init();
