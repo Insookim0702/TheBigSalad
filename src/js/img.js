@@ -27,3 +27,4 @@ import '../img/긴코드.png';
 import '../img/코드리뷰소집.png';
 import '../img/코드컨벤션.png';
 import '../img/코드컨벤션2.png';
+import '../img/appvue코드뭉치분리.png';
