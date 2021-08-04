@@ -108,6 +108,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/attach/JsDocs.pdf":
+/*!*******************************!*\
+  !*** ./src/attach/JsDocs.pdf ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"./docs/JsDocs.pdf?0640859435c78674a191fd462197877f\");\n\n//# sourceURL=webpack://theBigSalad/./src/attach/JsDocs.pdf?");
+
+/***/ }),
+
 /***/ "./src/attach/NODE_ENV_USAGE_HOST_AUTO_SETTING.pdf":
 /*!*********************************************************!*\
   !*** ./src/attach/NODE_ENV_USAGE_HOST_AUTO_SETTING.pdf ***!
@@ -679,7 +690,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _attach_NODE_ENV_USAGE_HOST_AUTO_SETTING_pdf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../attach/NODE_ENV_USAGE_HOST_AUTO_SETTING.pdf */ \"./src/attach/NODE_ENV_USAGE_HOST_AUTO_SETTING.pdf\");\n/* harmony import */ var _attach_NODE_ENV_USAGE_IP_SEPARATE_FROM_CODEBASE_pdf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../attach/NODE_ENV_USAGE_IP_SEPARATE_FROM_CODEBASE.pdf */ \"./src/attach/NODE_ENV_USAGE_IP_SEPARATE_FROM_CODEBASE.pdf\");\n/* harmony import */ var _attach_JAVASCRIPT_DOCS_pdf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../attach/JAVASCRIPT_DOCS.pdf */ \"./src/attach/JAVASCRIPT_DOCS.pdf\");\n/* harmony import */ var _attach_VUE_LIFECYCLE_pdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../attach/VUE_LIFECYCLE.pdf */ \"./src/attach/VUE_LIFECYCLE.pdf\");\n\n\n\n\n\n\n//# sourceURL=webpack://theBigSalad/./src/js/pdf.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _attach_NODE_ENV_USAGE_HOST_AUTO_SETTING_pdf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../attach/NODE_ENV_USAGE_HOST_AUTO_SETTING.pdf */ \"./src/attach/NODE_ENV_USAGE_HOST_AUTO_SETTING.pdf\");\n/* harmony import */ var _attach_NODE_ENV_USAGE_IP_SEPARATE_FROM_CODEBASE_pdf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../attach/NODE_ENV_USAGE_IP_SEPARATE_FROM_CODEBASE.pdf */ \"./src/attach/NODE_ENV_USAGE_IP_SEPARATE_FROM_CODEBASE.pdf\");\n/* harmony import */ var _attach_JAVASCRIPT_DOCS_pdf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../attach/JAVASCRIPT_DOCS.pdf */ \"./src/attach/JAVASCRIPT_DOCS.pdf\");\n/* harmony import */ var _attach_VUE_LIFECYCLE_pdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../attach/VUE_LIFECYCLE.pdf */ \"./src/attach/VUE_LIFECYCLE.pdf\");\n/* harmony import */ var _attach_JsDocs_pdf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../attach/JsDocs.pdf */ \"./src/attach/JsDocs.pdf\");\n\n\n\n\n\n\n\n//# sourceURL=webpack://theBigSalad/./src/js/pdf.js?");
 
 /***/ })
 
