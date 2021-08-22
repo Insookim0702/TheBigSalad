@@ -69,6 +69,18 @@ const insoo = {
             ],
         },
         {
+            title: '<h3><a class="link" name="skill-typescript">Typescript</a><span class="point">.</span></h3>',
+            contents: [{ content: 'React + typescript로 개발 가능.', link: [] }],
+        },
+        {
+            title: '<h3><a class="link" name="skill-react">React</a><span class="point">.</span></h3>',
+            contents: [
+                { content: 'React 라이프 사이클 및 상태 관리 훅 사용 가능.', link: [] },
+                { content: 'Material-ui 템플릿으로 빠르게 디자인 요구사항 화면 개발 가능.', link: [] },
+                { content: '대학생 프로젝트 참여 Front-end 기여 100% - React, Typescript 사용 ', link: [{ title: '개발 깃허브 주소', url: 'https://github.com/Insookim0702/vaccine_review' }] },
+            ],
+        },
+        {
             title: '<h3>웹 지식<span class="point">.</span></h3>',
             contents: [
                 { content: '<a class="black" href="https://pinokio0702.tistory.com/363?category=443984" target="_blank" >Vue 렌더링 원리 알아보기</a>', link: [] },
