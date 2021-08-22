@@ -175,7 +175,7 @@ transition: 0.4s transform;
             ],
         },
         {
-            title: '<h3>Back-end skillsg<span class="point">.</span></h3>',
+            title: '<h3>Back-end skills<span class="point">.</span></h3>',
             comment:
                 '대부분 인프런을 통해 학습한 기술들입니다. 실제 업무에서 사용하는 skill은 아니지만, 아래 기술을 한 번쯤 다루고 공부해봤기 때문에 백엔드나 데브옵스 개발자들과 소통을 할 수 있고, 제품 아키텍쳐를 이해할 수 있습니다.',
             contents: [
