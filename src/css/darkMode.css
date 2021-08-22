@@ -94,3 +94,17 @@ body.dark .open_project {
     background-color: #ff508b;
     color: #f7f1e3;
 }
+
+body.dark a.link:hover::before {
+    color: #ff508b;
+    content: '＃';
+}
+
+body.dark a.link:hover {
+    color: #ff508b;
+    text-decoration: underline;
+}
+body.dark a.link {
+    text-decoration: none;
+    color: #bdc3c7;
+}
