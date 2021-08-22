@@ -8,3 +8,6 @@ import './js/WhiteDarkModeScript';
 import './js/SideEventScript';
 import './js/OpenProjectScript';
 import './js/EmailCopyScript';
+import './js/Mount2Skills';
+import './js/Mount2Contact';
+import './js/Mount2SideList';
