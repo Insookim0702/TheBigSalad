@@ -100,22 +100,37 @@ a {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-a:not(.link)::before {
+a:not(.link):not(.section_title)::before {
     content: '🔗  ';
 }
 
 a.link:hover::before {
-    color: #00b894;
+    color: aquamarine;
     content: '＃';
 }
 
 a.link:hover {
-    color: #00b894;
+    color: aquamarine;
     text-decoration: underline;
 }
 a.link {
     text-decoration: none;
     color: #bdc3c7;
+}
+
+a.section_title {
+    text-decoration: none;
+    color: #bdc3c7;
+}
+
+a.section_title:hover {
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+a.section_title:hover::before {
+    color: aquamarine;
+    content: '＃';
 }
 
 p {

@@ -1,7 +1,7 @@
 import insoo from './Insoo';
 const contactSection = document.querySelector('.insoo_contact');
 const contactTitle = document.createElement('h2');
-contactTitle.innerHTML = '<a class="black link" href="#contact" name="contact">Contact</a><span class="point">.</span>';
+contactTitle.innerHTML = '<a class="black section_title" href="#contact" name="contact">Contact</a><span class="point">.</span>';
 
 const contactList = document.createElement('div');
 contactList.className = 'contact';

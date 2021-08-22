@@ -6,7 +6,11 @@ const DARK_ARROW = document.querySelector('.dark_arrow');
 const CONTENTS = document.querySelector('.contents_box');
 const SECTION = document.querySelectorAll('section');
 
-const LITTLE_TITLE = document.querySelectorAll('.little_title');
+const LITTLE_TITLE = document.querySelectorAll('.link');
+// console.log(LITTLE_TITLE);
+// LITTLE_TITLE.forEach((title) => {
+//     console.log(title.getBoundingClientRect().y);
+// });
 
 const INNER_HEIGHT = window.innerHeight;
 const WEB_PAGE_TOTAL_HEIGHT = BODY.offsetHeight;

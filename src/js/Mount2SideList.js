@@ -1,5 +1,6 @@
 const stickyBox = document.querySelector('.content_sticky_box');
 const linkList = document.createElement('div');
+
 linkList.className = 'contents';
 const list = [
     { title: 'Work Experience', link: '#work-experience' },
@@ -11,7 +12,6 @@ const list = [
 ];
 for (let item of list) {
     const p = document.createElement('p');
-    p.className = 'little_title';
     const a = document.createElement('a');
     a.className = 'black link';
     a.href = item.link;

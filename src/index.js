@@ -5,7 +5,7 @@ import './js/ScrollScript';
 import './js/DataCalcScript';
 import './js/ArrowFucScript';
 import './js/WhiteDarkModeScript';
-import './js/SideEventScript';
+// import './js/SideEventScript';
 import './js/OpenProjectScript';
 import './js/EmailCopyScript';
 import './js/Mount2Skills';
